@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html>
+
+	<head>
+		<title>Formulaire</title>
+		<link rel="stylesheet" type="text/css" href="./css/Espaceentreprise.css">
+		<meta charset="utf-8">
+	</head>
+	<!--déplacé les infos méta dans le head!-->
+	<body>
+		<section id="headets">
+		<!--créé un wrapper-->
+			<section id="alititle">
+				<h3>Espace Entreprise</h3>
+			</section>
+			<section id="aliIntro">
+				<p>Quod cum ita sit, paucae domus studiorum seriis cultibus antea celebratae nunc ludibriis ignaviae torpentis exundant, vocali sonu, perflabili tinnitu fidium resultantes. denique pro philosopho cantor et in locum oratoris doctor artium ludicrarum accitur et bybliothecis sepulcrorum ritu in perpetuum clausis organa fabricantur hydraulica, et lyrae ad speciem carpentorum ingentes tibiaeque et histrionici gestus instrumenta non levia.</p>
+			</section>
+			<!--enlevé br (réglé avec padding) et ajouté section
+
+					<!--il faut changer value par placeholder; en effet quand on met value il y a un texte déjà tapé que l'utilisateur doit effacer; alors qu'avec placeholder on a un texte d'arrière-plan quand le cadre est vide-->
+			<section id="connectforms">
+					<form id="aliregister" method="post" action="#">
+						<fieldset> <!--formulaire ajouté; le fieldset c'est le tag pour identifier les différents inputs-->
+							<h3>Je m'inscris</h3>
+							<!-- remplace br par du padding-->
+							
+							<label for="email"></label>
+							<input type="email"  placeholder= "Votre Email" name="Email" id="Alitexte" />
+							<label for="pass"></label>
+							<input  placeholder="Votre mot de passe" name="pass" id="Alitexte"  maxlength="10"/> 
+							<label for="pass"></label>
+							<input  placeholder="Retapez votre mot de passe" name="pass" id="Alitexte" maxlength="10"/>
+							<label for="inscr"></label>
+							<input type="submit" name="inscr" value="Je m'inscris" class="aliformbutton">
+							<!--ici on met un input type submit-->
+						</fieldset>
+					</form>
+
+					<form id="aliconnect" method="post" action="#">
+						<fieldset>
+							<h3>Je me connecte</h3>
+							<label for="email"></label>
+							<input type="email" name="Email" id="Alitexte" placeholder="Votre Email" />
+							<label for="pass"></label>
+							<input type="password" name="pass" id="Alitexte" placeholder="Votre mot de passe" maxlength="10"/>
+							<label for="connect"></label>
+							<input type="submit" class="aliformbutton" name="connect" value="Je me connecte">	 
+		 				</fieldset>
+					</form>
+			</section>
+
+			<section id="connectedforms">
+
+					<form id="alistage" method="post" action="#">
+				 		<fieldset> 
+				 			<h3>Proposer un stage</h3>
+		       				<label  for="name"></label>
+		       				<input  type="text" name="text" id="Alitexte" placeholder="Nom de l'Entreprise" size="15" maxlength="10" />
+		     				<label for="name"></label>
+		      				<input type="text" name="nom" id="Alitexte" placeholder="Nature du stage" size="15" maxlength="10"/>
+		      				<label for="name"></label>
+		     				<input type="text" name="nom" id="Alitexte" placeholder="Nature du stage" size="15" maxlength="10"/>
+		       
+		      				<textarea rows="5" cols="25" id="textarea" placeholder="Description du stage">
+		      				</textarea><br />	      					 
+		      				<label for="send"></label>
+		      				<input type="submit" class="aliformbutton" name="send" value="Envoyer">  
+		      		 	</fieldset>
+		      		</form>
+
+		      		<form id="alipeda" method="post" action="#">
+		      		 	<fieldset>
+		      		 		<h3>Proposer un projet pédagogique</h3>
+		       				
+		       				<label  for="name"></label>
+		       				<input  type="text" name="text" id="Alitexte" placeholder="Nom de l'Entreprise" size="15" maxlength="10" />
+
+		     				<label for="name"></label>
+		      				<input type="text" name="nom" id="Alitexte" placeholder="Date du stage" size="15" maxlength="10"/>       
+		      				<textarea rows="5" cols="25" id="textarea" placeholder="Description du projet">
+		       				</textarea><br />
+		       				<label for="send2"></label>
+		      				<input type="submit" class="aliformbutton" value="Envoyer" name="send2">     
+		      		 	
+		      		 	</fieldset>
+		      		 </form>
+		    </section>
+		</section>
+	</body>
+
+</html>
+

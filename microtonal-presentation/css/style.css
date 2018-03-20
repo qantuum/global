@@ -1,0 +1,140 @@
+body {
+	font-size: 26px;
+}
+
+#topnav ul {
+	list-style-type: none;
+	display: flex;
+	flex-flow: inline;
+	justify-content: space-between;
+	padding: 0;
+}
+
+#topnav li {
+	text-align: center;
+	line-height: 40px;
+	font-size: 2em;
+	vertical-align: center;
+	color: hsl(0, 50%, 50%);
+	font-weight: bold;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#topnav a {
+	color: inherit;
+	text-decoration: none;
+}
+
+#topnav a:hover {
+	border: inset 2px hsl(230, 50%, 50%);
+	border-radius: 64px;
+}
+
+#bigborder {
+	display: flex;
+	max-width: 98%;
+	max-height: 660px;
+	margin-left: 1%;
+	margin-top: 1%;
+	padding-top: 30px;
+	background-color: brown;
+	background-image: url(http://images.all-free-download.com/images/graphicthumb/abstract_colored_grunge_pattern_vector_graphics_543631.jpg);
+	background-repeat: repeat;
+	border-radius: 70px;
+	border: solid 10px black;
+}
+
+#bigborder img {
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#content_square {
+	display: flex;
+	flex-flow: column;
+	width: 92%;
+	height: 620px;
+	margin-bottom: 30px;
+	background-color: hsl(230, 70%, 30%);
+	opacity: 0.88;
+}
+
+#topnav {
+	height: 75px;
+	width: 100%;
+	background-color: black;
+	position: relative;
+	top: 10px;
+}
+
+#content_each_slide {
+	display: flex;
+	flex-flow: inline;
+	justify-content: center;
+}
+
+.contentbox {
+	margin: 30px;
+	display: flex;
+	flex-flow: column;
+}
+
+.contentbox h1 {
+	color: white;
+	font-size: 1.3em;
+}
+
+.contentbox h2 {
+	color: white;
+	font-size: 1.1em;
+}
+
+.contentbox p {
+	font-size: 1em;
+	color: silver;
+}
+
+.contentbox ul {
+	color: silver;
+}
+
+.contentbox li {
+	font-size: 1em;
+	color: silver;
+	list-style-type: "\266C";
+	padding-left: 10px;
+}
+
+.logoimg {
+	size: 100px;
+	width: 100px;
+	margin: 15px;
+}
+
+#video {
+	display: none;
+}
+
+#content_each_slide button {
+	margin-top: 150px;
+	width: 150px;
+	height: 100px;
+	background-color: inherit;
+	border: 2px dotted silver;
+	color: silver;
+	font-size: 1em;
+}
+
+a, a:hover, a:active {
+	color: inherit;
+}
+
+a:hover {
+	color: white;
+}
+
+.para {
+	width: 45%;
+}

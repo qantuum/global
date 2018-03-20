@@ -1,0 +1,34 @@
+body {
+	background-color: hsl(222, 20%, 10%);
+}
+
+table, tr, th, td {
+	border: 3px solid black;
+	border-collapse: collapse;
+	border-radius: 20%;
+}
+
+
+th {
+	background-color: hsl(266, 40%, 40%);
+}
+
+tr:nth-child(2n+1){
+	background-color: hsl(120, 70%, 30%);
+}
+
+tr:nth-child(2n) {
+	background-color:hsl(220, 30%, 30%);
+}
+
+tr:nth-child(2n+1):hover {
+	background-color: hsl(120, 30%, 30%);
+}
+
+tr:nth-child(2n):hover {
+	background-color:hsl(220, 70%, 30%);
+}
+
+/*un tableau à 2 colonnes, 6 lignes, titre non inclus, en tout deux couleurs différentes,
+une couleur différente pour les lignes paires et impaaires, et au hover un petit effet qui
+me montre sur quelle ligne j'ai ma souris*/

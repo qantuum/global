@@ -1,0 +1,549 @@
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*#################### GENERAL ####################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Ubuntu", Arial, sans-serif;
+    font-size: 26px;
+}
+
+ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+a {
+   text-decoration: none;
+   color: white;
+}
+
+a:active, a:focus {
+    outline: 0;
+    border: none;
+}
+
+h2 {
+    padding-top: 150px;
+    color: black;
+    font-size: 1.5em;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+li {
+    font-size: 0.35em;
+}
+
+nav li, h3 {
+    font-size: 0.8em;
+}
+
+p, h4 {
+    font-size: 0.63em;
+}
+
+/*fait le reset des tags de base (valeurs par défaut : liens bleus en souligné,
+padding de 40 sur les ul, margin, padding un peu partout...) -
+IMPORTANT: la seule taille de texte (font-sizing) en px doit être celle du reset. Tout le reste;
+doit être écrit en em. Aparement le em s'adapte à la taille de l'élément-parent*/
+
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*#################### HEADER #####################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+
+header{
+    color: white;
+    background-color: black;
+    z-index: 200;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}/*placement du header au centre de la page (horiz), le z-index et la position permettent qu'il reste
+au dessus de tout le défilement du site*/
+
+header nav {
+    float: right;
+    margin-top: 35px;
+    margin-right: 40px;
+}/*màj taille police ||| ajout de paddings*/
+
+header nav ul li {
+    display: inline-block;
+    padding-top: 10px;
+    float: left;
+}
+
+header nav ul li a {
+    padding: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+/*éléments du nav*/
+
+.franckwrapper img {
+    padding-top: 15px;
+    max-width: 8%;
+    padding-left: 20px;
+    float: left;
+}/*propriétés du logo dans le topnav*/
+
+.activNav {
+    background-color: #E80041;
+    border: 2px solid #C80041;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+#headaccueil {
+    background-image: url('../img/classe.jpg');
+    background-color: black;
+    height: 650px;
+    background-size: cover;
+    background-position: top;
+    margin-top: 120px;
+} 
+
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*#################PARTIE A PROPOS#################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+
+
+/*centre le texte au milileu de la page*/
+#headpropos {
+    width: 100%;
+}
+
+.boitegriselucas {
+    border: 6px solid #858585;
+    box-sizing: content-box;
+}
+/*créer la boite du titre sur fond gris*/
+
+.aproposlucas {
+    background-color: #858585;
+}
+
+/*permet d'aligner les éléments contenu dans les sections/div enfants*/
+.alignementlucas {
+    display: flex;
+    flew-direction: row;
+}
+
+/*prend la moitié du bloc*/
+.bloclucas {    
+    width: 50%;
+    padding-top: 20px;
+    width: 50%;
+    background-color: #F3F3F3;
+}
+/*centre le titre au milieu du bloc*/
+.justifytitlelucas {
+    text-align: center;
+}
+/*centre le text au milieu du bloc*/
+.justifytextlucas {
+    margin: 30px;
+    text-align: justify;    
+}
+/*créer le deuxième bloc avec le fond différent*/
+.grey { 
+    background-color: #E3E2D5;  
+}
+
+.alinealucas {
+    margin-left:30px;
+}
+
+.redlucas {
+    color:#E80041;
+    padding-top: 25px;
+    padding-bottom: 40px;   
+}
+
+.redlucas a {
+    color: inherit;
+}
+
+/*met en gras le caractère, le centre,le centre dans la box, */
+.boldlucas { 
+    color:#E80041;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 18px;
+    
+}
+
+
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*##################PARTIE TROMBI##################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+
+#headpromo {
+    display: flex;
+    flex-direction: column;
+    border: 6px solid #858585;
+    box-sizing: border-box;
+}/*head promo c'est la section consacrée au trombinoscope - 
+border-box range la bordure DEDANS la largeur demandée -
+flex permet de ranger nos éléments de manière efficace...
+flex column c'est pour que chaque élément soit placé en-dessous de l'autre*/
+
+.marvinphototitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #858585;
+    pading-top: 40px;
+    padding-bottom: 25px;
+}
+
+/*juste le titre pour avoir une boîte propre et centrer le texte -
+le width 100% ça représente la largeur contenue dans l'élément parent (en l'occurence le #headpromo,
+qui lui est réglé à 80%, donc on a 100% de 80% ce qui aligne bien mon titre sur toute la largeur -
+le justify-content permet de mettre le titre au centre*/
+
+#marvinphotoaction {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+/*on met en flex; le row-reverse ça fait que chaque élément html est mis à côté de l'autre,
+reverse change l'ordre donné en html par l'ordre inverse*/
+
+
+#marvinphotocontent {
+    background-color: #F3F3F3;
+    width: 50%;
+}
+
+/*#marvinphotoaction aside {
+    width: 10%;
+    background-color: #F3F3F3;
+}*/
+
+#marvininfophoto {
+    width: 50%;
+}
+/*bon là on définit la largeur de chaque subdivision; et poof quand on additionne ça fait 100%*/
+
+#marvinphotocontent img {
+    max-width: 87px;
+    margin: 5px 5px;
+}
+
+#marvinphotocontent img:hover {
+    filter: brightness(130%);
+    box-shadow: 3px 5px 4px black;
+}
+/*bon là c'est juste pour que les images de la section collection d'images trombinoscope
+soient à la bonne taille psartek - y a un petit effet stylé au survol (hover) des images*/
+
+#marvinphotoaction aside h4 {
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+#marvinphotoaction aside p, #marvinphotoaction aside li {
+    padding: 5px 15px;
+    color: black;
+    font-family: "Ubuntu", Arial, sans-serif;
+}
+/*réglages du aside, rien de folichon mais ça aide pour la visibilité*/
+
+#marvinphotoback {
+    position: absolute;
+    z-index: -200;
+}
+
+
+#marvinphotoback img {
+    width: 190%;
+    height: auto;
+}
+
+.marvinphotooverlayback {
+    position: absolute;
+}
+
+.marvininfophotooverlayback:not(.marvinphotooverlay) {
+    background-color: black;
+    top: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: opacity(80%);
+    padding-bottom: 1px;
+}
+
+.marvininfophotooverlay li{
+    font-size: 0.65em;
+}
+
+.marvininfophotooverlay {
+    position: relative;
+    padding: 200px 30px 200px 30px
+}
+
+.marvininfophotooverlay p, .marvininfophotooverlay li, .marvininfophotooverlay h4 {
+    color: white;
+}
+
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*################PARTIE ENTREPRISE################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+
+#headets {
+    background-color:#E3E2D5;
+    border: 6px solid #858585;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#alititle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #858585;
+    pading-top: 40px;
+    padding-bottom: 25px;
+}
+
+#headets input, #headets textarea, #headets form{
+    border-radius: 5px;
+}
+
+#headets fieldset {
+    height: 100%;
+}
+
+#headets input, #headets textarea {
+    margin-bottom: 20px;
+}
+
+#headets li {
+    font-size: 0.85em;
+}
+
+#aliIntro {
+    padding: 20px;
+}
+
+
+#connectforms, #connectedforms{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#aliregister, #aliconnect, #alistage, #alipeda{
+    background-color: #ED1450;
+    color: white;
+    height: auto;
+    width: 20%;
+}
+
+.aliformbutton{
+    background-color: #ED1450;
+    color: white;
+    border-radius: 5px;
+    border-color: white;
+    text-align: center;
+}
+
+
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*#################PARTIE CONTACTS#################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+
+/*Le container qui contient tout le contenu de la section formulaire*/
+#headcontact {
+    background-color: #858585;
+    padding: 0.5%;
+    font-family: "Ubuntu", Arial, sans-serif;
+}
+/**ajout celia pour repérage*/
+
+/**changement du sélecteur pour plus clair*/
+
+/*la div qui contient le text explicatif de la section formulaire*/
+#headcontact form {
+    background-color: white;
+    padding: 1%;
+    color: black;
+    background-color: #E3E2D5;
+}
+/**changement sélecteur, plus clair*/
+
+/*Le texte explicatif sous le titre h3 "Formulaire de contact*/
+.celiatext {
+    padding: 0 3% 0 3%; 
+    line-height: 1.3em;
+}
+
+/*La box rose ou se trouve le formulaire*/
+#headcontact fieldset {
+    background-color: #ED1450;
+    border-style: none;
+    padding: 3%;
+    margin: 3%;
+    border: 2px solid #ED1450; 
+    border-style: inset;
+    border-radius: 1%;
+}
+
+/*Titre dans la box rose "Nous contacter"*/
+#headcontact fieldset h3 {
+    color: white;
+    padding-bottom: 1%;
+}
+/**changement sélecteur, plus clair*/
+
+/*Les parties Nom, Prénom et Email dans le formulaire*/
+#headcontact fieldset input {
+    width: 70%;
+    line-height: 1.9em;
+    padding-left: 1%;
+    border-radius: 10px;
+}
+/**changement sélecteur, plus clair*/
+
+
+/*La partie Message dans le formulaire*/
+#headcontact fieldset textarea {
+    line-height: 1.4em;
+    border-radius: 1%;
+    padding-left: 1%;
+    padding-top: 1%;
+    width: 95%;
+    border-radius: 10px;
+}
+
+/*Le bouton d'envoie du formulaire à la fin*/
+a.button{
+        display: block;
+        color: white;
+        height:30px;
+        line-height: 1.5em;
+        text-align: center;
+        margin-bottom: 25px;
+        text-decoration: none;
+        width: 40%;
+        border: 1px solid #FFD1DE;
+        border-radius: 10px;
+        padding: 1% 0 2% 0;
+        margin-top: 2%; 
+    }
+/*La couleur du bouton d'envoie change lorqu'il est survolé avec le curseur*/
+    a:hover.button{
+    color: black;
+}
+
+
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+/*##################PARTIE FOOTER##################*/
+/*#################################################*/
+/*#################################################*/
+/*#################################################*/
+
+footer {
+    background-color: #2B2B2B;
+    display: flex;
+    flex-direction: column;
+}
+/*ajout de width et margin*/
+
+.marvinfootertitle {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+/*permet de centrer mon titre*/
+
+.marvinfootertitle h3 {
+    padding: 20px 0 50px 0;
+}
+
+.marvinpartner {
+    width: 96%;
+    margin-left: 2%;
+    padding-bottom: 50px;
+}
+/*petit espacement du cadre partenaires*/
+
+.marvinpartner ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/*positionnement des images dans le cadre partenaires*/
+
+.marvinpartner li {
+    width: 9%;
+    margin: 10px;
+}
+
+.marvinpartner img {
+    width: 100%;
+}
+/*redimensionnement des images (enfants des li, d'où le width 100%)*/
+
+
+
+
+
+.marvinsimploncanneslogo {
+    display: flex;
+    justify-content: center;
+}/*pour mettre le logo du bas au centre*/
+
+.marvinsimploncanneslogo a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 8%;
+}
+
+.marvinsimploncanneslogo img {
+    padding: 20px 0 20px 0;
+}
+

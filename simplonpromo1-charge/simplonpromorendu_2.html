@@ -1,0 +1,341 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>Simplon Cannes Frayère WebDev 1 - Global</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<link rel="icon" href="https://simplon.co/wp-content/themes/DiviChildV2/images/logo.png"><!--Ajout du petit logo en tête d'onglet-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link rel="stylesheet" type="text/css" href="./css/styleglobal.css"><!--link du css-->
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"><!--Ajout de police Ubuntu-->
+		<link href="http://fonts.googleapis.com/css?family=crete+round" rel="stylesheet"><!--Ajouté par Franck (???)-->
+	</head>
+
+	<body>
+		<!--script trouvé par Franck dans https://codepen.io/joxmar/pen/NqqMEg,
+		ne marche pas... mais on garde, sait-on jamais-->
+		<!--<script>
+				  // Cache selectors
+				var lastId,
+				 topMenu = $("#headaccueil"),
+				 topMenuHeight = topMenu.outerHeight()+1,
+				 // All list items
+				 menuItems = topMenu.find("a"),
+				 // Anchors corresponding to menu items
+				 scrollItems = menuItems.map(function(){
+				   var item = $($(this).attr("href"));
+				    if (item.length) { return item; }
+				 });
+
+				// Bind click handler to menu items
+				// so we can get a fancy scroll animation
+				menuItems.click(function(e){
+				  var href = $(this).attr("href"),
+				      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+				  $('html, body').stop().animate({ 
+				      scrollTop: offsetTop
+				  }, 850);
+				  e.preventDefault();
+				});
+
+				// Bind to scroll
+				$(window).scroll(function(){
+				   // Get container scroll position
+				   var fromTop = $(this).scrollTop()+topMenuHeight;
+				   
+				   // Get id of current scroll item
+				   var cur = scrollItems.map(function(){
+				     if ($(this).offset().top < fromTop)
+				       return this;
+				   });
+				   // Get the id of the current element
+				   cur = cur[cur.length-1];
+				   var id = cur && cur.length ? cur[0].id : "";
+				   
+				   if (lastId !== id) {
+				       lastId = id;
+				       // Set/remove active class
+				       menuItems
+				         .parent().removeClass("activNav")
+				         .end().filter("[href=#"+id+"]").parent().addClass("activNav");
+				   }                   
+				});
+
+		</script>-->
+
+		<header><!--à mettre à jour src="FRANCK"-->
+	        <div class="franckwrapper"><!--classe màj-->
+	            <img src="./img/simplontransp.png"><!--Ajout du logo Simplon + enlèvement du petit texte-->
+	            <nav>
+	                <ul>
+	                    <li><a href="#headaccueil" class="activNav">Accueil</a></li>
+	                    <li><a href="#headpropos">A propos</a></li>  
+	                    <li><a href="#headpromo">La promo</a></li>  
+	                    <li><a href="#headagenda">Agenda</a></li>  
+	                    <li><a href="#headets">Entreprises</a></li>
+	                    <li><a href="#headcontact">Contact</a></li><!--Correction des catégories d'après cahier des charges(voir maquette pdf) ||| enlèvement du id recrutement - à mettre à jour avec l'histoire des viewports si on y arrive...-->
+	                </ul>
+	            </nav>
+	        </div>
+	    </header><!--fin FRANCK-->
+
+	    <section id="headaccueil"></section>
+
+	    <!--PARTIE A PROPOS DESIGNEE PAR LUCAS-->
+	    <!-- création d'une section pour centre le contenu dans la page -->
+		<section id="headpropos">
+			<!-- petit cadre gris autour de notre section à propos -->
+			<section class="boitegriselucas">
+				<section class="aproposlucas">
+					<h2>&Agrave; propos de l'école</h2>
+				</section>
+					 <!-- utilise la propriété display inline-flex pour aligner les deux blocs due l'on créer plus tard -->
+				<section class="alignementlucas">
+					<!-- partage la page en deux pour afficher les deux blocs côte à côte -->
+					<section class="bloclucas">
+						<!-- utilise margin-left et magin-right pour centrer le titre dans le bloc créé -->
+						<h3 class="justifytitlelucas">Notre activité</h3>
+						<!-- permet de centrer le paragraphe à l'intérieur du block -->
+						<div class="justifytextlucas">
+							<p>Amicitiis confidit in moribus ut magnae sed ego ab non habebat quidem magnae de sibi ut ab sibi sic quisque mei se est tamen non hercule plurimum egeat eius enim quidem quam virtutis nullo consecutae iudicet Sed tamen enim mei ac spe enim diligendi tamen virtute Africanus ut enim me.</p>
+						</div>
+							
+						<div class="alinealucas">
+							<!-- permet d'aligner le caractère et le texte grâce à la fonction dislpay : inline-flex -->
+							<section class="alignementlucas">									<!-- écrit en rouge -->
+								<p class="redlucas"><a href="#">En savoir plus<span class="boldlucas"> &gt; </span></a></p>
+								<!-- met le caractère spécial en gras  et en rouge-->
+							</section>
+						</div>
+
+					</section>
+					<!-- créer un deuxième bloc qui sera aligner avec le premier  -->
+					<section class="bloclucas grey">
+
+						<!-- utilise margin-left et magin-right pour centrer le titre dans le bloc créé  -->
+						<h3 class="justifytitlelucas">Nos valeurs</h3>
+						<!-- permet de centrer le paragraphe à l'intérieur du block -->
+						<div class="justifytextlucas">
+						<p>Ante docet perfecta tamquam non Simonides errores hic docet enim beate splendor ubi splendor esse levitate patriam convenit lasciviam ubi sunt convenit indulta magnificus convenit nati lyricus coetuum perfecta sed incondita sed beate ad beate ubi coetuum perfecta esse lasciviam errores enim ubi ratione beate reputantium Simonides paucorum lyricus lasciviam</p>
+						</div>
+
+						<div class="alinealucas">
+						<!-- permet d'aligner le caractère et le texte grâce à la fonction dislpay : inline-flex -->
+						<section class="alignementlucas">
+							<!-- écrit en rouge  -->
+							<p class="redlucas"><a href="#">En savoir plus<span class="boldlucas"> &gt; </span></a></p>
+							<!--écrit en gras et en rouge  -->
+						</section>
+						</div>	   
+					</section>
+				</section>
+			</section>
+		</section>
+		<!--FIN PARTIE A PROPOS-->
+
+	    <section id="headpromo"><!--à mettre à jour src="TROMBI MARVIN" ||| container-->
+			<div class="marvinphototitle"><!--titre section-->
+				<h2>Notre Promo Cannes-Frayère</h2>
+			</div>
+
+			<div id="marvinphotoaction"><!--contenu section : un cadre divisé en 3 sous-cadres-->
+
+				<div id="marvininfophoto"><!--Prmeier cadre : les infos. Tentative de overlay. Image, cadre nois en semi-transparence, texte... Chaud. Pas responsive-->
+					<div id="marvinphotoback">
+						<img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="backphoto">
+					</div>
+					<div class="marvininfophotooverlayback">
+						<div class="marvininfophotooverlay">
+							<h4>Nom de l'apprenant</h4>
+							<hr />
+							<ul>
+								<li>Ancienne carrière</li>
+								<hr />
+								<li>Témoignage</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="marvinphotocontent"><!--juste une boîte qui contient toutes les photos. Dans l'idée je voulais les positionner en JS donc elles n'ont pas d'autre conteneur... ça a l'air de faire l'affaire-->
+					<img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant01"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant02"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant03"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant04"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant05"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant06"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant07"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant08"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant09"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant10"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant11"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant12"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant13"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant14"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant15"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant16"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant17"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant18"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant19"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant20"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant21"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant22"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant23"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant24"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant25"><img src="https://i.pinimg.com/736x/98/41/30/984130f8a7d2ff27b23bd05df886d198.jpg" alt="Apprenant26">
+				</div>
+				<!--<aside><!--le petit aside. Montre les différentes tâches à accomplir... C'est plus un aide-mémoire pour la présentation. Clairement les fonctionnalités JS dont on a besoin sont épiques; j'ai pas l'niveau
+					<h4>A faire avec ça :</h4>
+					<ul>
+						<li>En visualisation standard, les images sont affichées selon ordre chaotique, entremêlé (JS).</li>
+						<li>Attendre que l'on arrive sur le bon positionnement de scroll pour activer un évènement (JS).</li>
+						<li>Nature de l'évènement : Réorganiser les photos en cercle autour des deux centrales : les formateurs (JS + JQuery). Le trick c'est que le cercle est le positionnement déjà réglé dans le code de base.</li>
+						<li>L'utilisateur doit pouvoir survoler les photos ce qui déclenche un autre élément : l'apparition d'un carré informatif (JS + CSS hide).</li>
+						<li>Le carré informatif existe sur le côté et est maintenu vide (ou bien photo de promo par exemple) tant que l'image n'est pas survolée | Il se remplit ensuite avec la photo agrandie de l'apprenant.e avec en overlay un carré noir transparent contenant la présentation de l'apprenant.e.</li>
+						<li>Décomposition de l'opération; 1/ Faire apparaître le cadre de texte toujours à la même position (CSS + JS ???); 2/ Les contenus du cadre de texte changent dynamiquement en fonction de l'id (ou class ???) de l'image survolée (CSS + JS ???)</li>
+						<li>Ici : Démonstration avec la même image partout sans mise en place JS, et le cadre d'information déjà rempli...</li>
+					</ul>
+				</aside>-->
+				<!--Ressource :
+					Organisation en cercle :
+						https://stackoverflow.com/questions/10152390/dynamically-arrange-some-elements-around-a-circle
+						http://bl.ocks.org/bycoffe/3404776 (créé des petits points au lieu de faire apparaître les img déjà existants...)
+				-->
+
+			</div>
+
+
+		    
+		</section><!--FIN TROMBI MARVIN-->
+
+
+<section id="headets">
+
+	<!--<script>
+		var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,5000);
+
+function nextSlide() {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+	</script>//////le script pour slides ne fonctionne pas ici.... sais pas pourquoi...-->
+
+		<!--créé un wrapper-->
+			<section id="alititle">
+				<h2>Espace Entreprise</h2>
+			</section>
+			<section id="aliIntro">
+				<p>Quod cum ita sit, paucae domus studiorum seriis cultibus antea celebratae nunc ludibriis ignaviae torpentis exundant, vocali sonu, perflabili tinnitu fidium resultantes. denique pro philosopho cantor et in locum oratoris doctor artium ludicrarum accitur et bybliothecis sepulcrorum ritu in perpetuum clausis organa fabricantur hydraulica, et lyrae ad speciem carpentorum ingentes tibiaeque et histrionici gestus instrumenta non levia.</p>
+			</section>
+			<!--enlevé br (réglé avec padding) et ajouté section
+
+					<!--il faut changer value par placeholder; en effet quand on met value il y a un texte déjà tapé que l'utilisateur doit effacer; alors qu'avec placeholder on a un texte d'arrière-plan quand le cadre est vide-->
+			<section id="etsslides">
+				<ul id="slides">
+				<li id="connectforms" class="slide">
+						<form id="aliregister" method="post" action="#">
+							<fieldset> <!--formulaire ajouté; le fieldset c'est le tag pour identifier les différents inputs-->
+								<h3>Je m'inscris</h3>
+								<!-- remplace br par du padding-->
+								
+								<label for="email"></label>
+								<input type="email"  placeholder= "Votre Email" name="Email" id="Alitexte" />
+								<label for="pass"></label>
+								<input  placeholder="Votre mot de passe" name="pass" id="Alitexte"  maxlength="10"/> 
+								<label for="pass"></label>
+								<input  placeholder="Retapez votre mot de passe" name="pass" id="Alitexte" maxlength="10"/>
+								<label for="inscr"></label>
+								<input type="submit" name="inscr" value="Je m'inscris" class="aliformbutton">
+								<!--ici on met un input type submit-->
+							</fieldset>
+						</form>
+
+						<form id="aliconnect" method="post" action="#">
+							<fieldset>
+								<h3>Je me connecte</h3>
+								<label for="email"></label>
+								<input type="email" name="Email" id="Alitexte" placeholder="Votre Email" />
+								<label for="pass"></label>
+								<input type="password" name="pass" id="Alitexte" placeholder="Votre mot de passe" maxlength="10"/>
+								<label for="connect"></label>
+								<input type="submit" class="aliformbutton" name="connect" value="Je me connecte">	 
+			 				</fieldset>
+						</form>
+				</li>
+				<hr />
+				<li id="connectedforms" class="slide">
+
+						<form id="alistage" method="post" action="#">
+					 		<fieldset> 
+					 			<h3>Proposer un stage</h3>
+			       				<label  for="name"></label>
+			       				<input  type="text" name="text" id="Alitexte" placeholder="Nom de l'Entreprise" size="15" maxlength="10" />
+			     				<label for="name"></label>
+			      				<input type="text" name="nom" id="Alitexte" placeholder="Nature du stage" size="15" maxlength="10"/>
+			      				<label for="name"></label>
+			     				<input type="text" name="nom" id="Alitexte" placeholder="Nature du stage" size="15" maxlength="10"/>
+			       
+			      				<textarea rows="5" cols="25" id="textarea" placeholder="Description du stage">
+			      				</textarea><br />	      					 
+			      				<label for="send"></label>
+			      				<input type="submit" class="aliformbutton" name="send" value="Envoyer">  
+			      		 	</fieldset>
+			      		</form>
+
+			      		<form id="alipeda" method="post" action="#">
+			      		 	<fieldset>
+			      		 		<h3>Proposer un projet pédagogique</h3>
+			       				
+			       				<label  for="name"></label>
+			       				<input  type="text" name="text" id="Alitexte" placeholder="Nom de l'Entreprise" size="15" maxlength="10" />
+
+			     				<label for="name"></label>
+			      				<input type="text" name="nom" id="Alitexte" placeholder="Date du stage" size="15" maxlength="10"/>       
+			      				<textarea rows="5" cols="25" id="textarea" placeholder="Description du projet">
+			       				</textarea><br />
+			       				<label for="send2"></label>
+			      				<input type="submit" class="aliformbutton" value="Envoyer" name="send2">     
+			      		 	
+			      		 	</fieldset>
+			      		 </form>
+			    </li>
+			  </ul>
+			</section>
+		</section>
+
+		<!-- Container global qui regroupe tous les autres containers -->
+	<section id="headcontact">
+		<h2>Nous Contacter</h2>
+		<!-- Container qui contient le texte explicatif du formulaire de contact -->
+		<form action="#" method="get">
+			<h3 class="celiatext">Formulaire de contact</h3>
+			<p class="celiatext">
+				Quare hoc quidem praeceptum, cuiuscumque est, ad tollendam amicitiam valet; illud potius praecipiendum fuit, ut eam diligentiam adhiberemus in citiis comparandis, ut ne quando amare inciperemus eum. <br> 
+				Quin etiam si minus felices in diligendo fuissemus, ferendum id Scipio potius quam inimicitiarum tempus cogitandum putabat. <br>
+				Quare hoc quidem praeceptum, cuiuscumque est, ad tollendam amicitiam valet; illud potius praecipiendum fuit, ut eam diligentiam adhiberemus in amicit comparandis, ut ne quando amare inciperemus eum, quem aliquando odisse possemus. <br> 
+				Quando etiam si minus felices in diligendo fuissemus, ferendum id Scipio potius quam inimicitiarum tempus cogitandum putabat.
+			</p>
+			<!-- La partie formulaire, champs à remplir -->
+			<fieldset>
+				<h3>Nous contacter</h3>
+				<input type="text" placeholder="Nom" name="nom" value="" required> <br><br>
+				<input type="text" placeholder="Prénom" name="prenom" value="" required> <br><br>
+				<input type="email" placeholder="Email" name="email" value="" required> <br><br>
+				<!-- Textarea pour taper plus d'une ligne. Si le text est très long, a scroll bar appears on the right side --> 
+				<textarea placeholder="Message" name="commentaire" rows="10" cols="130"></textarea> <br>
+				<!-- Bouton pour envoyer le formulaire une fois rempli --> 
+				<a href="#" class="button">ENVOYER</a>
+			</fieldset>
+			
+		</form>
+	</section>
+
+		
+
+		<footer><!-- à mettre à jour src="FOOTER"-->
+			<div class="marvinfootertitle"><!--titre section-->
+				<h3>Nos partenaires</h3>
+			</div>
+			<div class="marvinpartner"><!--là on met chaque image du footer, bien rangée dans son li-->
+				<ul>
+					<li><a href="#"><img src="https://simplon.co/wp-content/uploads/2018/01/French-Impact-Logo.png" alt="Partenaire 1"></a></li>
+					<li><a href="#"><img src="https://simplon.co/wp-content/uploads/2017/12/frenchtech-1.png" alt="#"></a></li>
+					<li><a href="#"><img src="https://simplon.co/wp-content/uploads/2017/12/ashoka-1.png" alt="Partenaire 2"></a></li>
+					<li><a href="#"><img src="https://simplon.co/wp-content/uploads/2017/12/gen-1.png" alt="#"></a></li>
+					<li><a href="#"><img src="https://simplon.co/wp-content/uploads/2017/12/iledefrance-1.png" alt="Partenaire 3"></a></li>
+					<li><a href="#"><img src="https://simplon.co/wp-content/uploads/2018/02/82864.jpg" alt="#"></a></li>
+					<li><a href="#"><img src="https://simplon.co/wp-content/uploads/2017/12/1280px-AG2R_La_Mondiale_logo.svg_.png" alt="Partenaire 4"></a></li>
+					<li><a href="#"><img src="http://pluspng.com/img-png/delta-airlines-png--1024.png" alt="#"></a></li>
+					<li><a href="#"><img src="https://www.thecelebrantdirectory.com/assets/CelebrantPhotos/_resampled/ScaleWidthWyI2MDAiXQ/Fuze-Logo-transp-72dpi.png" alt="Partenaire 5"></a></li>
+					<li><a href="#"><img src="http://pluspng.com/img-png/delta-airlines-png--1024.png" alt="#"></a></li>
+					<li><a href="#"><img src="https://www.canadacompany.ca/_cascade/blocks/en/our-impact/logos/Transp-CC-Logo-2013-EN.png" alt="Partenaire 6"></a></li>
+					<li><a href="#"><img src="https://simplon.co/wp-content/uploads/2017/12/investissementavenir-1.png" alt="#"></a></li>
+					<li><a href="#"><img src="https://www.canadacompany.ca/_cascade/blocks/en/our-impact/logos/Transp-CC-Logo-2013-EN.png" alt="Partenaire 7"></a></li>
+					<li><a href="#"><img src="http://pluspng.com/img-png/delta-airlines-png--1024.png" alt="#"></a></li>
+					<li><a href="#"><img src="https://www.canadacompany.ca/_cascade/blocks/en/our-impact/logos/Transp-CC-Logo-2013-EN.png" alt="Partenaire 8"></a></li>
+				</ul>
+			</div>
+			<div class="marvinsimploncanneslogo"><!--Ici juste la petite section qui nous donne le logo-->
+				<a href="https://simplon.co"><img src="./img/simplontransp.png" alt="logo-simplon-cannes"></a><!--et ben si je mets le div comme contener de l'image et non le a, ça marche pas comme je veux. pour cibler mon image. Voir css.-->
+			</div>
+		</footer><!--FIN FOOTER-->
+
+	</body>
+</html>

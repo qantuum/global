@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>Présentation-Microtonal</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<section id="bigborder">
+			<a href="index.html"><img src="http://www.clker.com/cliparts/0/d/H/0/t/i/home-logo-hi.png" width="50px" height="50px" alt="home"></a>
+			<section id="content_square">
+
+
+				<section id="topnav">
+					<ul>
+						<li><a href="index.html"><<</a></li>
+						<li><small>O2|</small>Quelques questions...</li>
+						<li><a href="03.html">>></a></li>
+					</ul>
+				</section>
+
+
+				<section id="content_each_slide">
+					<div class="contentbox">
+						<button onclick="showvid()">Extraits musicaux</button>
+					</div>
+
+					<div class="contentbox" id="video">
+						<iframe width="200" height="200" src="https://www.youtube.com/embed/CmzMvCq9XMk?start=874" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						<iframe width="200" height="200" src="https://www.youtube.com/embed/cJePQvcuTgI?start=20" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+
+						<script>
+							function showvid() {
+						    var x = document.getElementById("video");
+						    if (x.style.display === "none") {
+						        x.style.display = "flex";
+						    } else {
+						        x.style.display = "none";
+							    }
+							}
+						</script>
+
+					<div class="contentbox">
+						<ul>
+							<li>Qu’est-ce que la MAO ?</li>
+							<li>Qu’est qu’un ton ? Un demi-ton ?</li>
+							<li>Qu’est-ce qu’un micro-intervalle ou microton ?</li>
+							<li>Micro-intervalles connus ?</li>
+							<li>Pourquoi la MAO ? Pourquoi les micro-intervalles ?</li>
+							<li>Vers l’infini et au-delà …</li>
+					</div>
+				</section>
+
+			</section>
+		</section>
+
+	</body>
+
+</html>

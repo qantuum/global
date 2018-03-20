@@ -1,0 +1,89 @@
+body {
+margin: 0 0 0 0;
+}
+
+/*Le container qui contient tout le contenu de la section formulaire*/
+#headcontact {
+	background-color: #000000;
+	padding: 0.5%;
+	font-family: "Ubuntu", Arial, sans-serif;
+}
+/**ajout celia pour repérage*/
+
+/*Grand titre de la section formulaire "Nous contacter"*/
+#headcontact h2 {
+	color: white;
+	text-align: center;
+	padding: 1%;
+	margin-top: 1%;
+}
+/**changement du sélecteur pour plus clair*/
+
+/*la div qui contient le text explicatif de la section formulaire*/
+#headcontact form {
+	background-color: white;
+	padding: 1%;
+	color: #666666;
+}
+/**changement sélecteur, plus clair*/
+
+/*Le texte explicatif sous le titre h3 "Formulaire de contact*/
+.celiatext {
+	padding: 0 3% 0 3%; 
+	line-height: 1.3em;
+}
+
+/*La box rose ou se trouve le formulaire*/
+#headcontact fieldset {
+	background-color: #ED1450;
+	border-style: none;
+	padding: 3%;
+	margin: 3%;
+	border: 2px solid #ED1450; 
+	border-style: inset;
+	border-radius: 1%;
+}
+
+/*Titre dans la box rose "Nous contacter"*/
+#headcontact fieldset h3 {
+	color: white;
+	padding-bottom: 1%;
+}
+/**changement sélecteur, plus clair*/
+
+/*Les parties Nom, Prénom et Email dans le formulaire*/
+#headcontact fieldset input {
+	width: 70%;
+	line-height: 1.9em;
+	padding-left: 1%;
+}
+/**changement sélecteur, plus clair*/
+
+
+/*La partie Message dans le formulaire*/
+#headcontact fieldset textarea {
+	line-height: 1.4em;
+	border-radius: 1%;
+	padding-left: 1%;
+	padding-top: 1%;
+	width: 95%;
+}
+
+/*Le bouton d'envoie du formulaire à la fin*/
+a.button{
+		display: block;
+		color: #FFFFFF;
+		height:30px;
+		line-height: 1.5em;
+		text-align: center;
+		margin-bottom: 14px;
+		text-decoration: none;
+		width: 40%;
+		border: 1px solid #FFD1DE;
+		border-radius: 3%;
+		padding: 0.8% 0 0.5% 0;
+		margin-top: 2%; 
+	}
+/*La couleur du bouton d'envoie change lorqu'il est survolé avec le curseur*/
+	a:hover.button{
+		color: #000000;

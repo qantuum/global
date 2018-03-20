@@ -1,0 +1,72 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+/*j'ai désactivé le titre et enlevé les tailles de police, j'essaie de gérer tout ça en global...*/
+/*centre le texte au milileu de la page*/
+#headpropos {
+	width: 100%;
+}
+
+.boitegriselucas {
+	border: 6px solid #858585;
+	box-sizing: content-box;
+}
+/*créer la boite du titre sur fond gris*/
+
+.aproposlucas {
+ 	background-color: #858585;
+ 	/*font-size: 30px;
+ 	color: white;
+ 	padding: 1%;
+ 	text-align: center;*/
+}/*je désactive ça car je les efface dans le global où les h2 sont normalisés sur toute la page*/
+
+/*permet d'aligner les éléments contenu dans les sections/div enfants*/
+.alignementlucas {
+	display: flex;
+	flew-direction: row;
+}
+
+/*prend la moitié du bloc*/
+.bloclucas {	
+	width: 50%;
+	padding-top: 20px;
+	width: 50%;
+	background-color: #F3F3F3;
+}
+/*centre le titre au milieu du bloc*/
+.justifytitlelucas {
+	text-align: center;
+}
+/*centre le text au milieu du bloc*/
+.justifytextlucas {
+	margin: 30px;
+	text-align: justify;	
+}
+/*créer le deuxième bloc avec le fond différent*/
+.grey {	
+	background-color: #E3E2D5; 	
+}
+
+.alinealucas {
+	margin-left:30px;
+}
+
+.redlucas {
+	color:#E80041;
+	padding-top: 25px;
+	padding-bottom: 40px;	
+}
+
+/*met en gras le caractère, le centre,le centre dans la box, */
+.boldlucas { 
+	color:#E80041;
+	font-weight: bold;
+	margin: 0;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 18px;
+	
+}

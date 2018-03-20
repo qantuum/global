@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+}
+
+body {
+	width: 100%;
+	font-size: 26px;
+	font-family: "Ubuntu", Arial, sans-serif;
+}
+
+footer {
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+}
+
+a:active, a:focus {
+	outline: 0;
+	border: none;
+}
+
+/*####################PARTIE TROMBI####################*/
+
+#marvinphotoframes {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin-left: 10%;
+	border: 2px solid #858585;
+}
+
+.marvinphototitle {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	background-color: #858585;
+	pading-top: 40px;
+	padding-bottom: 25px;
+}
+
+.marvinphototitle h3 {
+	color: white;
+	font-size: 1em;
+}
+
+#marvinphotoaction {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+#marvinphotoaction aside {
+	width: 20%;
+}
+
+#marvinphotoaction aside h4 {
+	font-size: 0.8em;
+	text-indent: 20px;
+}
+
+#marvinphotocontent img {
+	max-width: 92px;
+	margin: 5px 5px;
+}
+
+#marvinphotocontent img:hover {
+	filter: brightness(130%);
+	box-shadow: 3px 5px 4px black;
+}
+
+#marvinphotoaction aside p, #marvinphotoaction aside li {
+	padding: 5px 15px;
+	color: black;
+	font-size: 0.45em;
+	font-family: "Ubuntu", Arial, sans-serif;
+}
+
+#marvinphotocontent {
+	width: 40%;
+}
+
+#marvininfophoto {
+	width: 40%;
+}
+
+#marvininfophoto img {
+	position: absolute;
+	width: 32%;
+}
+
+.marvinphotooverlayback {
+	position: relative;
+}
+
+.marvininfophotooverlayback:not(.marvinphotooverlay) {
+	background-color: black;
+	top: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	filter: opacity(80%);
+}
+
+.marvininfophotooverlay {
+	position: relative;
+	padding: 200px 30px 200px 30px
+}
+
+.marvininfophotooverlay p, .marvininfophotooverlay li, .marvininfophotooverlay h4 {
+	color: white;
+	font-size: 0.5em;
+}
+
+
+/*####################FIN PARTIE TROMBI####################*/
+
+/*####################PARTIE FOOTER####################*/
+
+.marvinfootertitle {
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+
+.marvinpartner {
+	width: 70%;
+	margin-left: 15%;
+	padding-bottom: 50px;
+}
+
+.marvinsimploncanneslogo {
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	justify-content: center;
+}
+
+.marvinfootertitle h3 {
+	font-size: 0.75em;
+	padding: 20px 0 50px 0;
+}
+
+.marvinpartner ul {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 0;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.marvinpartner li {
+	width: 10%;
+	margin: 10px;
+}
+
+.marvinpartner img {
+	width: 100%;
+}
+
+.marvinsimploncanneslogo a {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 8%;
+}
+
+.marvinsimploncanneslogo img {
+	padding: 20px 0 20px 0;
+}
+
+/*####################FIN PARTIE FOOTER####################*/

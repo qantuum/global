@@ -1,0 +1,31 @@
+famosos plan de rpésentation
+
+support : accès site serveur FTP (pas de ppt cette fois-ci)
+chronomètre : sur téléphone
+notes papier (pas interdites)
+
+* * * * * * * * * * * * *
+
+---3 min : 
+introduction du projet, présentation des idées, résumé des présentations précédentes  [à répartir]
+
+---5min :
+partie styling; HTML CSS présentation des pages dans l'ordre (index, contacts, bateaux, user dashboard) [Thib]
+parler vite fait de Bootstrap [Michel]
+Menus [Mathieu]
+Formulaires [Thibaut]
+Responsive en flex [Marvin]
+
+---3min :
+Fonctionnalités Javascript ; parler du Slide [Michel] et du Leaflet [Marvin]
+
+---3-4min :
+Présentation du famosos code PHP sur register/connection [Mathieu]
+petite crotte de nez sur la galère éprouvée à trouver la bonne info pour installer le serveur LAMP (si applicable)... [Michel]
+
+---5-6 min :
+présentation du code PHP sur changement de mot de passe [Marvin]
+perspectives [à répartir]
+conclusion [à répartir]
+
+end-post|||reste à faire : répartition des dernières parties

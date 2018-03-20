@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#headets h3 {
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+#headets input, #headets textarea, #headets form{
+	border-radius: 5px;
+}
+
+#headets fieldset {
+	height: 100%;
+}
+
+#headets input, #headets textarea {
+	margin-bottom: 20px;
+}
+
+#headets {
+	background-color:#E3E2D5;
+	font-family: "Ubuntu", Arial, sans-serif;
+	border: 6px solid #858585;
+}
+
+#alititle{
+	text-align: center;
+	background-color: #858585 ;
+	width: 100%
+	height: 200px;
+}
+
+#aliIntro {
+	padding: 20px;
+}
+
+
+#connectforms, #connectedforms{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#aliregister, #aliconnect, #alistage, #alipeda{
+	background-color: #ED1450;
+	color: white;
+	height: auto;
+	width: 20%;
+}
+
+.aliformbutton{
+	background-color: #ED1450;
+	color: white;
+	border-radius: 5px;
+	border-color: white;
+	text-align: center;
+}
+
+
+

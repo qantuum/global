@@ -1,0 +1,90 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>Formulaire</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+	</head>
+
+	<body>
+
+		<form method="post" action="formulaire.html" ><!--il faut spécifier une méthode de récolte. POST anonymise les données alors que GET les rend dans l'URL-->
+			<label>*Votre genre:</label><br />
+			<div>
+				<input type="radio" name="gender" id="h" required="required">
+				<label for="h">Homme</label>
+
+				<input type="radio" name="gender" id="f" required="required">
+				<label for="f">Femme</label>
+
+				 <input type="radio" name="gender" id="o" required="required">
+				 <label for="o">Hélicoptère apache</label><br /><!--pour une selection d'une seule option à la fois, les trois options doivent porter le même "name"-->
+				 <!--Le required est là pour rendre le champ obligatoire-->
+			</div><br />
+
+			<label>Votre couleur préférée:</label><br />	
+			<input type="color" id="color"><br /><br /><!--ce type il serve à rien L O L non mais allô c'est comme tu fais un site tu as pas de css L O L ||| ne fonctionne que sur les navigateurs récents-->	
+
+			<label>Choix de truc:</label><br />
+			<select id="monselect" multiple>
+			  <option value="Plaustre">Plaustre</option> 
+			  <option value="Jubignette" selected>Jubignette</option>
+			  <option value="Colérozon">Colérozon</option>
+			</select><br /><br /><!--le multiple permet un choix multiple (captain obvious) ||| le selected est là pour sélectionner une option automatiquement en arrivant sur le formulaire-->
+
+			<label>Vos réseaux sociaux préférés:</label><br />
+
+			<div>
+				  <input type="checkbox" name="network" value="facebook" checked id="facebook"><label for="facebook">Facebook</label><br />
+  				  <input type="checkbox" name="network" value="instagram" id="instagram"><label for="instagram">Instagram</label><br />
+				  <input type="checkbox" name="network" value="caramail" id="caramail"><label for="caramail">Caramail</label><br />
+  				  <input type="checkbox" name="network" value="MSN" id="msn"><label for="msn">MSN</label><br />
+  				  <input type="checkbox" name="network" value="myspace" id="myspace"><label for="myspace">mySpace</label><br />  				  
+
+  				  <!--Checked met la petite croix dans la boîte par défaut dès l'arrivée sur le formulaire-->
+			</div><br />
+
+			<label for="name">*Votre prénom:</label><br />
+			<input type="text" name="prénom" placeholder="votre prénom" value="Dominic" id="name" required="required"><br />
+			<!--le for permet de sélectionner l'élément dont l'id est ciblé quand on clique sur le label ||| placeholder c'est le texte qui s'affiche en fond dans la boîte quand elle est vide ||| value c'est ce qui est d'écrit dans la boîte par défaut, il faut l'effacer pour une nouvelle valeur-->
+
+			<label>*Votre nom:</label><br />
+			<input type="text" name="nom" placeholder="votre nom" value="Doe" required="required"><br />
+
+			<label>*Votre date de naissance:</label><br />
+			<input type="date" name="birth" max="2000-03-08"><br /><!--input type date est fonctionnel sur les navigateurs récents. le min et max permettent d'empêcher une saisie en dehors du paramètre saisi ||| type récent, incompatible avec vieux navigateur-->
+
+			<label>*Votre e-mail:</label><br />
+			<input type="email" name="email" placeholder="john.cena@cena.com" required="required"><br /><!--n'autorise pas la saisie d'autre chose que [...]@[...] ||| type récent, incompatible avec vieux navigateur-->
+
+
+
+			<label>*Votre commentaire:</label><br />
+			<textarea rows="10" cols="72" name="votre commentaire" required="required">
+			Moi je suis Rascar Capac et je t'attaque avec mon Mac
+			La vie une chausse-trappe, pas de quartier quand les lyrics frappent
+			Mon sourire te glace comme un clic-clac qui grince<
+			Le voilà qui revient, mince ! Tous les mardis pour te serrer la pince
+			Donne moi le courage d'aller bouffer tous les nuages
+			Écoute mon cœur, écoute la rage, écoute ce texte anthropophage
+			Écoute ce mec qui vote réac', écoute cette mère seule qui craque
+			Écoute le cri des animaux quand on les enfouit dans un sac
+			Le Crou revient fier, tapi dans l'ombre pendant des millénaires
+			Ses poumons t'éclairent comme l'EDF ou le nucléaire
+			Alors ferme ta gueule, les Argémiones marchent seuls
+			Pas de meuf pas de taff pas de bouffe, c'est bien casse-gueule
+			Je me calmerai jamais, j'en ai trop gros sur la patate
+			Je coupe les pattes, t'épate, encore donner des coups de savate
+			Et c'est l'hypocrisie totale, peu d'espoir que ça dérange
+			Et c'est l'apathie générale, peu d'espoir que les gens changent mais
+			</textarea><br /><!-- rows nombre de ligne, cols nombre de caractères de large-->
+			<input type="reset" value="Remettre à zéro"><!--Remet le formulaire aux valeurs initiales-->
+			<input type="submit" value="Validuer"><!--Enregistrer les données. En fait l'action de submit entre les informations dans une variable superglobale du serveur; ces informations devront être traitées en PHP... ($_POST...$_GET....)-->
+
+		</form>
+
+	</body>
+</html>
+
+
+

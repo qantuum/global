@@ -1,0 +1,32 @@
+.page
+
+    .views
+        - for(var i = 0; i < 15; i++)
+            .view.view--1
+                .view__inner
+                    h2(style="font-size: 100px") #{2000 + i}
+
+    .timeline__wrapper
+        .timeline
+            a.timeline__all-cars(href="#") All cars
+            ul.timeline__list
+                - for(var i = 0; i < 15; i++)
+                    - var className = 'timeline__item'
+                    - if(i == 0)
+                        - className = className + ' timeline__item--active'
+                        
+                    li(class= className)
+                        a.timeline__link(href="#")
+                            .timeline__item__point
+                        .timeline__item__content
+                            img.timeline__item__thumb(src="http://testuje.cz/timeline-car-thumbnail.png")
+                            .timeline__item__shadow
+                        .timeline__item__year #{2000 + i}
+
+            a.timeline__exit(href="#") Exit
+            .timeline__path
+                .timeline__path__triangle.timeline__path__triangle--moving
+                .timeline__path__triangle.timeline__path__triangle--static-1
+                .timeline__path__triangle.timeline__path__triangle--static-2
+                .timeline__path__triangle.timeline__path__triangle--static-3
+    
