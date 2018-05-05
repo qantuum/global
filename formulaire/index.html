@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>Formulaire</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"><!--Ajout de police Ubuntu-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+		<h1>Nouvel utilisateur</h1>
+
+		<form method="post" action="#" id="dataz">			
+			<fieldset id="profil"><legend>informations de profil</legend>
+				<h2>Profil</h2>
+				<ul>
+					<li id="namezz">
+						<label for="Name"><span class="labelz">Nom :*</span></label>
+						<input type="text" placeholder="Votre Nom" id="Name">
+						<input type="text" placeholder="Votre prénom" id="forename">
+						<label class="blindhide" for="forename">Prénom :* </label>
+					</li>
+					<li>
+						<label for="Gender"><span class="labelz">Sexe : </span></label>
+						<select form="dataz" id="Gender" name="gender">
+							<option value="Homme">Homme</option>
+							<option value="Femme">Femme</option>
+							<option value="Autre">Autre</option>
+						</select>
+					</li>
+					<li>
+						<label for="Birthdate"><span class="labelz">Date de naissance : </span></label>
+						<input type="text" placeholder="AAAA/MM/JJ" id="Birthdate">
+					</li>
+					<li>
+						<label for="Nationality"><span class="labelz">Nationalité :* </span></label>
+						<input type="text" placeholder="Votre nationalité" id="Nationality">
+					</li>
+					<li>
+						<label for="Adresse"><span class="labelz">Adresse :* </span></label>
+						<input type="text" placeholder="27, avenue Georges Soros" id="Adresse">
+					</li>
+					<li>
+						<label for="postcode"><span class="labelz">CP :* </span></label>
+						<input type="text"  placeholder="Votre code postal" id="postcode">
+					</li>
+					<li>
+						<label for="town"><span class="labelz">Ville :* </span></label>
+						<input type="text" placeholder="Votre ville" id="town">
+					</li>
+					<li id="qpvfield">
+						<span class="labelz" id="qpvs">QPV : </span>
+						<input type="radio" name="qpv" value="oui" checked id="qpvyes"><label for="qpvyes">Oui / </label>
+						<input type="radio" name="qpv" value="non" id="qpvno"><label id="qpvnono" for="qpvno">Non</label>
+					</li>
+					<li>
+						<label for="emailz"><span class="labelz">Email :* </span></label>
+						<input type="email" placeholder="jean.dupont@caramail.com" id="emailz">
+					</li>
+					<li>
+						<label for="Téléphone"><span class="labelz">Téléphone :* </span></label>
+						<input type="tel" placeholder="Votre n°" id="telefonz">
+					</li>
+					<li>
+						<label for="Statut"><span class="labelz">Statut :* </span></label>
+						<input type="text" placeholder="Votre statut" id="Statut">
+					</li>
+					<li>
+						<label for="polemp"><span class="labelz">N° Pôle Emploi : </span></label>
+						<input type="text" placeholder="Votre n° pôle emploi" id="polemp">
+					</li>
+					<li>
+						<label for="numsecu"><span class="labelz">N° secu : </span></label>
+						<input type="text" placeholder="Votre n° de sécu" id="numsecu">
+					</li>
+					<li>
+						<input type="button" value="Mettre à jour" id="clicksave">
+					</li>
+					<!--QPV, statut, pôle emploi, sécu n'ont pas de format obligatoire. vérifier que chaque champ a la bonne longueur et la bonne forme (emails... nom et prénom a plus de 2 lettres)-->
+					<li>
+						<input type="button" value="Ajouter des champs !" id="achamps">
+					</li>
+					<script src="./js/script.js" type="text/javascript"></script>
+				</ul>
+			</fieldset>
+
+			<fieldset id="photo"><legend>photo de l'utilisateur</legend>
+				<h2>Photo</h2>
+				<ul>
+					<li><img src="https://www.quizz.biz/uploads/quizz/687909/6_e5rLw.jpg" alt="photo de profil de l'utilisateur"></li>
+					<li><input type="file" name="Parcourir..." id="photoupload"><label class="blindhide" for="photoupload">Parcourir...</label></li>
+					<li><input type="button" value="Envoyer" id="photosend"></li>
+				</ul>
+			</fieldset>
+
+		</form>
+
+		<form id="backez">
+			<input type="button" value="<< Retour" id="backz">
+		</form>
+
+
+	</body>
+		

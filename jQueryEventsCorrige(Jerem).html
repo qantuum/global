@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title> Les Evenements </title>
+	<meta name="description" content="Description du site">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.container{
+		width: 80%;
+		margin: 0 auto;
+		background-color: #f1f2f6;
+		padding: 15px;
+	}
+	h1{
+		text-align: center;
+	}
+	h2{
+		padding: 20px;
+	}
+	#bloc1{
+		width: 150px;
+		height: 150px;
+	}
+	.vert{
+		background-color: #20bf6b;
+	}
+	.bleu{
+		background-color: #2d98da;
+	}
+	.rouge{
+		background-color: #e74c3c;
+	}
+	#para1{
+		background-color: #d1d8e0;
+	}
+	.bloc2{
+		display: inline-block;
+		border: 1px solid black;
+		width: 150px;
+		height: 150px;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		margin: 20px;
+		line-height: 150px;
+	}
+	#result{
+		width: 250px;
+		height: 350px;
+	}
+	button{
+
+		background-color: #34495e;
+		color: #ecf0f1;
+		padding: 10px 30px;
+	}
+</style>
+
+
+</head>
+<body>
+	<div class="container">
+		<h1>Les Evenements</h1>
+		<h2>Exercice 1 : </h2>
+		<p>Grâce à Jquery, changez la couleur du carré vert en bleu lorsque la souris rentre dedans puis le remettre en vert lorsque la souris en sort.</p>
+		<div id="bloc1" class="vert"></div>
+		<h2>Exercice 2 : </h2>
+		<p>Grâce à Jquery, faites en sorte que le texte tapé dans le champs ci-dessous soit repporté "en live" dans le paragraphe ayant l'id para1</p>
+		<input type="text" name="champ1" id="champ1"><p id="para1">le texte doit s'afficher ici</p>
+		<h2>Exercice 3 (boss final) : </h2>
+		<p>Les carrés ci-dessous présentent chacuns soit des nombres , pairs et impairs, soit des chaines de caractere.<br>
+			Premiere étape : en Jquery, faites en sorte que quand le pointeur de la souris passe au dessus d'un carré , le comportement suivant soit déclenché :<br>
+			Si le nombre est pair, le carré devient <span class="vert">vert</span>(vous pouvez utiliser la classe déja disponible).<br>
+			Si le nombre est impair, le carré devient <span class="rouge">rouge</span>(vous pouvez utiliser la classe déja disponible).<br>
+			Si c'est une chaine de caractères, le carré devient <span class="bleu">bleu</span>(vous pouvez utiliser la classe déja disponible).<br>
+		</p>
+		<div class="bloc2">1</div>
+		<div class="bloc2">2</div>
+		<div class="bloc2">A</div>
+		<div class="bloc2">56</div>
+		<div class="bloc2">Simplon</div>
+		<div class="bloc2">73</div>
+		<br>
+
+		<h2>Exercice 3 (boss final:p2) : </h2>
+		<p>Dernière phase : Faites en sorte que quand le bouton "Afficher tout" est cliqué, les informations concernant le contenu des carrés sont affichées dans le paragraphe ayant l'id result....Une seule fois(des clics supplémentaires ne font rien)<br>
+			exemple : 1 = impair ; 2 = pair, A = chaine de caractères, etc... </p>
+			<button id="btn">Afficher tout</button>
+			<p id="result"></p>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+
+		$( document ).ready(function() {
+//.READY PERMET DE LANCER TOUTES LES FONCTIONS DE S'EXECUTER SEULEMENT A PARTIR DU MOMENT OU LA PAGE EST TOTALLEMENT CHARGÉ
+			$("#bloc1").hover(function() {	//.HOVER FAIT UN HOVER -- EVENEMENT QUAND LE POINTEUR  DE LA SOURIS EST DESSUS -- FIN QUAND IL N'EST PLUS DESSUS
+				var $bloc1 = $("div#bloc1");	// VARIBLE POUR CIBLER LE #BLOC1
+				$bloc1.toggleClass("bleu");	// JE FAIS UN .toggleClass SUR MON #BLOC1 CE QUI LUI AJOUTE LA CLASSE BLEU DEJA PRÉSENTE DANS LE CSS
+			});	// .toggleClass AJOUTE UNE CLASSE A L'ELEMENT CIBLÉ S'IL NE L'A PAS DEJA -- SI IL L'A DEJA LUI RETIRE LA CLASSE
+					// QUAND LA SOURIS EST SUR LE CARRÉ ACTIVE L'EVENEMENT HOVER, QUI ACTIVE PAR LA SUITE LE toggleClass QUI LE REND BLEU
+					// QUAND LA SOURIS SORT, DESACTIVE LE HOVER, DONC PAS DE toggleClass. ALORS LE CARRE REVIENT A SA COULEUR D'ORRIGINE, LE VERT
+
+			var initText = $("#para1").text(); // initText CORRESPOND AU CONTENUE DU PARAGRAPHE #para1
+			$("#champ1").on("keyup", function () {	//ON APPLIQUE L'EVENEMENT keyup SUR L'INPUT #champ1 -- keyup APPELLE LA FONCTION CHAQUE FOIS QU'UNE TOUCHE DU CLAVIER EST RELACHÉ
+				$("#para1").text(initText + " " + $("#champ1").val());	//  JE DIS DE METTRE DANS LE TEXTE DE #para1
+			});						//	LE CONTENUE EXISTANT DE #para1 (initText) + UN ESPACE + LA VALEUR DE L'INPUT #champ1 (LES CARACTÈRES ENTRÉ DANS L'INPUT)
+
+
+			$(".bloc2").hover(function () {	// JE MET AUX L'ELEMENTS AYANT LA CLASSE .bloc2 UN EVENEMENT .HOVER
+				if ($(this).text() % 2  == 0) {	// JE COMMENCE UN CONDITION
+					$(this).toggleClass("vert");	//	THIS PERMET DE PRENDRE EN COMPTE LES BOITES UNE PAR UNE -- SI ON MET .bloc2 , TOUS LES BLOCS SERONT CIBLÉS
+				}	// CONDITION -- SI LE CONTENU (.TEXT) DU BLOC EST DIVISIBLE PAR DEUX SANS RESTE (== 0) ALORS TU AJOUTE LA CLASSE (.toggleClass) VERT
+				else if (($(this).text() % 2 == 1)) {
+					$(this).toggleClass("rouge");
+				}	// SI LE CONTENU (.TEXT) DU BLOC EST DIVISIBLE PAR DEUX AVEC UN RESTE (== 1) ALORS TU AJOUTE LA CLASSE (.toggleClass) ROUGE
+				else {
+					$(this).toggleClass("bleu");
+				}	// SINON, CELA VEUT DIRE QUE LE CONTENU (.TEXT) DU BLOC N'EST PAS DIVIBLE DONC QUE C'EST UNE CHAÎNE DE CARACTÈRE
+			});	// ALORS TU AJOUTE LA CLASSE (.toggleClass) BLEU
+
+
+			$("#btn").one("click", function () {
+//JE METS A MON BOUTTON L'EVENEMENT CLICK -- ONE ME DIT QUE L'EVENEMENT SE PRODUIRA UNE SEULE FOIS
+				$(".bloc2").each(function() {
+// JE CRÉ MA FONCTION AVEC EACH -- EACH VA PRENDRE TOUT LES RESULTATS
+					var $resultBox = $(this).text();	//RESULTBOX PRENDS LE CONTENUE TEXT DE CHAQUE BLOC 1 PAR 1
+					var $pair = $(this).text() % 2 == 0;	//SI LE CONTENU EST DIVISIBLE PAR DEUX SANS RESTE -- PAIR
+					var $impair = $(this).text() % 2 == 1;//SI LE CONTENU EST DIVISIBLE PAR DEUX AVEC UN RESTE -- IMPAIR
+
+					if ($pair) {	// ON MET .HTML ET PAS .TEXT SINON LES <BR/> NE SEONT PAS PRIS EN COMPTE
+					$("#result").html($("#result").html() + $resultBox +  " = " + "est pair!" + '<br/>' + '<br/>');
+				}	// SI PAIR --  ÉCRIT DANS LE P AYANT L'ID #RESULT,  LE CONTENUE DE #RESULT + LE TEXT DE MA BOITE + = + PAIR + VA A LA LIGNE + VA A LA LIGNE
+					else if ($impair) {
+						$("#result").html($("#result").html() + $resultBox + " = " + "est impair!" + '<br/>' + '<br/>');
+					}	// SI IMPAIR --ECRIT DANS #RESULT ,  LE CONTENUE DE #RESULT + LE TEXT DE MA BOITE + = + IMPAIR + VA A LA LIGNE + VA A LA LIGNE
+					else {
+						$("#result").html($("#result").html() + $resultBox + " = " + "est une chaine de caractères!" + '<br/>' + '<br/>');
+					}	// SI IMPAIR --ECRIT DANS #RESULT ,  LE CONTENUE DE #RESULT + LE TEXT DE MA BOITE + = + IMPAIR + VA A LA LIGNE + VA A LA LIGNE
+				} );
+			});
+		});
+
+		</script> <!-- JS -->
+	</body>
+	</html>

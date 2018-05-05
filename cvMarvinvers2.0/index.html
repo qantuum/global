@@ -1,0 +1,419 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>Marvin Wortman</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet"><!--Ajout de police Ubuntu-->
+		<link href="https://fonts.googleapis.com/css?family=Changa" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel = "icon" href = "https://image.flaticon.com/icons/svg/186/186545.svg">
+	</head>
+
+	<body>
+
+		<nav id = "navigator">
+			<fieldset>
+				<input type = "button" value="&uarr; Marvin WORTMAN" onclick = "init()">
+				<input type = "button" value = "Compétences" onclick = "compB()">
+				<input type = "button" value="Logiciels" onclick = "logB()">
+				<input type = "button" value="Formation" onclick = "formB()">
+				<!--<input type = "button" value = "Portfolio" onclick = "portB()">-->
+				<input type = "button" value = "Expériences Pro." onclick = "proB()">
+				<input type = "button" value = "Loisirs" onclick = "persB()">
+			</fieldset>
+		</nav>
+
+		<header id = "coordonnees">
+			<section id = "coordInfo" class = "flexRow">
+				<div>
+					<div id = "coordPhoto"></div>
+				</div>
+				<div id = "coordGeneral" class = "flexRow">
+					<ul>
+						<li><h2>Marvin WORTMAN</h2></li>
+						<li>27, rue Jean Gras</li>
+						<li>06150 Cannes-la-Bocca</li>
+						<li>26 ans</li>
+						<li>Permis B, non-véhiculé</lI>
+					</ul>
+					<ul>
+						<li><h2>Contact</h2></li>
+						<li><a href="mailto:wortman.marvin@gmail.com" target="_blank">wortman.marvin@gmail.com</a></li>
+						<li><a href="tel:0033767854321" target="_blank">+33(0)7 67 85 43 21</a></li>
+						<li><a href="./data/wortmanCv.pdf" id="pdflink" target="_blank"><input type = "button" value = "Télécharger le PDF"></a></li>
+					</ul>
+				</div>
+			</section>
+			<section id = "coorTitle">
+				<h1>Développeur WEB</h1>
+				<h2>En recherche de stage pour Juin 2018</h2>
+				<h2>Fin de formation en Octobre 2018</h2>
+				<h3>Persévérant et patient dans mon travail. Je vous souhaite la bienvenue, bonne visite !</h3>
+			</section>
+		</header>
+
+		<article>
+			<section id = "competences" class="infoblocks">
+				<h2>Mes compétences</h2>
+				<h3>Sur le terrain</h3>
+				<h4>Langages Web</h4>
+				<ul id = "compLanguages" class = "flexRow">
+					<li class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/1/1840.svg" alt = "HTML">
+						<p>Création, architecture basique de sites web : organisation en header, article, sections, footer, attibution des bons attributs. Commentaire des différentes sections, lecture et analyse d'une architecture existante.</p>
+						<ul class = "ratings">
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+						</ul>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/74/74944.svg" alt = "CSS">
+						<p>Utilisation de CSS pour le style et le positionnement. CSS flex, CSS grid, fonctions @media pour le responsive, applications d'effets (menus, effets de hover).</p>
+						<ul class = "ratings">
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+						</ul>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/74/74962.svg" alt = "JS">
+						<p>Bases de JavaScript : variables, fonctions, boucles. Programmes simples : calcul, manipulation du DOM, carrousel, modal, création d'un calendrier, création d'un timer.</p>
+						<ul class = "ratings">
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+						</ul>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/1/1975.svg" alt = "PHP">
+						<p>Bases apprises sur sololearn.com; développement plus détaillé prévu en classe semaines 18-19. </p>
+						<ul class = "ratings">
+							<li class = "full"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+						</ul>
+					</li>
+				</ul>
+				<h4>Frameworks</h4>
+				<ul id = "compFrameworks" class = "flexRow">
+					<li class = "tabDisplay">
+						<img src = "https://pluralsight.imgix.net/paths/path-icons/jquery-c93ba170c1.png" alt = "Jquery">
+						<h4>JQuery</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://makina-corpus.com/blog/societe/2016/leafletno_text.png/@@images/0e6c9028-9cde-4088-bd27-34f47e713230.png" alt = "Leaflet">
+						<h4>LeafLet</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://getbootstrap.com/assets/img/bootstrap-stack.png" alt = "Bootstrap">
+						<h4>BootStrap</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://www.supinfo.com/articles/resources/172195/3497/0.png" alt = "Symfony">
+						<h4>Symfony</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://seeklogo.com/images/L/laravel-logo-9B01588B1F-seeklogo.com.png" alt = "Laravel">
+						<h4>Laravel</h4>
+					</li>
+				</ul>
+				<h4>Autres compétences</h4>
+				<div class = "flexRow">
+					<ul id = "compNormalDisplay" class = "tabDisplay bigTab">
+						<li>Gestion de bases de données.</li>
+						<li>Design responsive, ergonomie.</li>
+						<li>Méthodologie de projet, méthodes agiles, versioning.</li>
+						<li>Esprit de synthèse, communication, disribution de l'information.</li>
+						<li>Mise en ligne de site sur serveur distant (ex : 1and1).</li>
+					</ul>
+				</div>
+				<h3>Compétences acquises durant ma carrière d'aromaticien (voir : Expériences Professionnelles)</h3>
+				<div class = "flexRow">
+					<ul id = "compOld" class = "tabDisplay bigTab">
+						<li>Gestion de bases de données via interface utilisateur (logiciel de gestion d'arômes).</li>
+						<li>Organisation et tenue de l'espace de travail (Laboratoire).</li>
+						<li>Conception de solutions "à la carte" (arômes bio, halal, poudre, atomisés).</li>
+						<li>Re-travail / Amélioration des solutions existantes (réduction du prix d'un arôme ou conversion en naturel).</li>
+						<li>Analyse de données (analyse et interprétation des spectres chromatographiques).</li>
+						<!--<li><input type = "button" value = "Plus de détails..."></li>-->
+					</ul>
+				</div>
+				<h3>Langues</h3>
+				<ul id = "compLang" class = "flexRow">
+					<li class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/197/197560.svg" alt = "Français">
+						<h4>Français</h4>
+						<p>"Ma langue natale."</p>
+						<ul class = "ratings">
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "full"></li>
+						</ul>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/197/197374.svg" alt = "English">
+						<h4>English</h4>
+						<p>"C1, Read, written, spoken, understood, TOEIC 840, obtained in 2012."</p>
+						<ul class = "ratings">
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "empty"></li>
+						</ul>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/197/197571.svg" alt = "Deutsch">
+						<h4>Deutsch</h4>
+						<p>"Ich habe für 1 Jahr gelebt in Deutschland . Dort habe ich A1 Niveau gelernt. Ich kann einige basischen Sätze sprechen und schreiben."</p>
+						<ul class = "ratings">
+							<li class = "full"></li>
+							<li class = "full"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+						</ul>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/197/197593.svg" alt = "Espanol">
+						<h4>Espanol</h4>
+						<p>"Sencillo, aprendido al instituto, entendido."</p>
+						<ul class = "ratings">
+							<li class = "full"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+							<li class = "empty"></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section id = "logiciels" class="infoblocks">
+				<h2>Les logiciels que j'utlise</h2>
+				<h3>En développment WEB</h3>
+				<ul id = "logWeb" class = "flexRow">
+					<li class = "tabDisplay">
+						<img src = "https://pbs.twimg.com/profile_images/907960213814239232/w628Yrnl_400x400.jpg" alt = "Sublime Text">
+						<h4>Sublime Text</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://www.gitdvcs.com/img/logo/git-logo-orange.svg" alt = "Git">
+						<h4>Git</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://cis.bentley.edu/sandbox/wp-content/uploads/2017/02/FileZilla-1.png" alt = "FileZilla">
+						<h4>FileZilla</h4>
+					</li>
+				</ul>
+				<h3>Pour mes projets personnels</h3>
+				<ul id = "logPerso" class = "flexRow">
+					<li class = "tabDisplay">
+						<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Lmms_logo.png/240px-Lmms_logo.png" alt = "LMMS">
+						<h4>LMMS</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://www.image-line.com/innovaeditor/assets/FL%20Studio%20Mobile3%20Rounded%201024.png" alt = "FL Studio 12">
+						<h4>Fruity Loops Studio 12</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://f4.bcbits.com/img/a2366894651_10.jpg" alt = "FamiTracker">
+						<h4>FamiTracker</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Audacity.svg/1024px-Audacity.svg.png" alt = "Audacity">
+						<h4>Audacity</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://4.bp.blogspot.com/-i--dOaTO_C4/Vsi9Ig73PKI/AAAAAAAACts/pwIzutyK2Z8/s400/photofiltre-logo_256x256.png" alt = "PhtoFiltre Studio 10">
+						<h4>PhotoFiltre Studio 10</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "http://telecharger.itespresso.fr/wp-content/uploads/2013/12/gimp-logo.png" alt = "Gimp">
+						<h4>Gimp</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://www.softwarecrew.com/wp-content/uploads/2012/07/RawTherapee200-175.png" alt = "RawTherapee">
+						<h4>RawTherapee</h4>
+					</li>
+					<li class = "tabDisplay">
+						<img src = "https://upload.wikimedia.org/wikipedia/fr/b/b0/Windows_Movie_Maker_icon.png" alt = "Window Movie Maker">
+						<h4>Windows Movie Maker</h4>
+					</li>
+				</ul>
+			</section>
+
+			<section id = "formation" class="infoblocks">
+				<h2>Ma formation</h2>
+				<div id = "formGeneral" class = "flexRow">
+					<div class = "tabDisplay">
+						<img src = "https://simplon.co/wp-content/uploads/2017/11/Simplon-logo-simplon.co_.png" alt = "Simplon">
+						<h4>Simplon.co Cannes Frayère</h4>
+						<h5>Fabrique Développeur.se WEB</h5>
+						<h5>Février - Octobre 2018</h5>
+						<hr />
+						<p>Simplon Cannes Frayère est un organisme de formation pour adultes, destiné majoritairement aux personnes en reconversion professionnelle.</p>
+						<p>Financée par Pôle Emploi, cette formation accélérée offre les bases en création de contenu web (architecture, design, dynamisme, interactivté, sécurité) et mise en ligne.</p>
+						<p>Sont aussi couverts : quelques FrameWorks, et surtout le "Savoir-être". Insertion professionnelle, communication en entreprise, travail d'équipe, travail sous délais courts, méthode agile, conception-design.</p>
+						<p>Au bout de la période de formation, le passage d'une certification de niveau 3 (BAC + 2) est possible devant un jury.</p>
+						<p>Cette formation propose donc des bases solides pour s'intégrer correctement dans une équipe de développeurs.</p>
+					</div>
+					<div class = "tabDisplay">
+						<img src = "http://www.planetecampus.com/wp-content/uploads/2016/06/isi.png" alt = "ISIPCA">
+						<h4>ISIPCA Versailles</h4>
+						<h5>Master Formulation Evaluation Sensorielle Parfumerie, Cosmétique, Arôme (FESIPCA)</h5>
+						<h5>Septembre 2013 - Août 2015</h5>
+						<hr />
+						<p>Master de chimie orienté vers les arômes alimentaires. Outre les multiples connaissances techniques, l'atout de cette formation était le projet d'études sur les deux ans.</p>
+						<p>La classe était divisée en trois (arômes, parfums, cosmétiques. Tous les élèves ont collaboré pour produire la marque "Entre Deux". La classe de soixante élèves a donc été scindée en différents services (développement, financement, etc...).</p>
+						<p>Etant étudiant en option arômes, j'ai intégré l'équipe "sponsoring" afin de solliciter nos partenaires pour du financement.</p>
+						<p>Une soirée de lancement donnée en Mai 2015 a permis d'offrir des coffrets contenant nos produits à nos partenaires</p>
+						<!--<input type = "button" value = "En savoir plus...">-->
+					</div>
+					<div class = "tabDisplay lycee">
+						<img src = "https://architopik.lemoniteur.fr/medias/programme/projet/format/resize/5401/format4/projet_5593/cabbook-33_540_360.jpg" alt = "Lycée Jules Ferry">
+						<h4>Lycée Jules Ferry Cannes</h4>
+						<h5>Obtention du Baccalauréat Sciences de l'Ingénieur</h5>
+						<h5>Obtenu en 2009</h5>
+						<hr />
+						<p>Entre l'obtention de mon baccalauréat et l'obtention de mon Master je suis passé par une année de classe préparatoire au CIV Valbonne, deux années de DUT à l'IUT d'Aix-Marseille et une troisième année de Licence de Chimie à l'Université de Montpellier.</p>
+					</div>
+				</div>
+				<h3>Cours en ligne utilisés pour apprendre des fonctionnalités et / ou pour résoudre un blocage</h3>
+				<div class = "flexRow">
+					<div class = "tabDisplay bigTab">
+						<ul>
+							<li>sololearn.com</li>
+							<li>codecademy.com</li>
+							<li>w3schools.com</li>
+							<li>developer.mozilla.org</li>
+							<li>pierre-giraud.com</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!--<section id = "portfolio" class="infoblocks">
+				<h2>Mon portfolio</h2>
+				<ul id = "portButtons" class = "flexRow">
+					<li class = "tabDisplay">
+						<img src = "#" alt = "site">
+						<h4>Site</h4>
+						<input type = "button" value = "Voir les infos...">
+					</li>
+					<li class = "tabDisplay">
+						<img src = "#" alt = "site">
+						<h4>Site</h4>
+						<input type = "button" value = "Voir les infos...">
+					</li>
+					<li class = "tabDisplay">
+						<img src = "#" alt = "site">
+						<h4>Site</h4>
+						<input type = "button" value = "Voir les infos...">
+					</li>
+				</ul>
+			</section>-->
+			<section id = "xpro" class="infoblocks">
+				<h2>Mes expériences professionnelles</h2>
+				<h3>Contrats principaux</h3>
+				<div id = "xproGeneral" class = "flexRow">
+					<div class = "tabDisplay">
+						<img src = "https://foodarom.com/wp-content/uploads/2015/02/logo1.png" alt = "Foodarom">
+						<h5>Aromaticien Junior</h5>
+						<h5>Décembre 2015 - Octobre 2017</h5>
+						<hr />
+						<p>Une expérience professionnelle qui m'a permis de m'épanouir dans le monde des arômes alimentaires. J'ai découvert au contact de cette compagnie toutes les matières premières utiles à la création d'arômes, et ai travaillé sur de multiples arômes et applications alimentaires, telle les produits laitiers, les protéines en poudre pour sportif, la chocolaterie.</p>
+						<!--<input type = "button" value = "En savoir plus...">-->
+					</div>
+					<div class = tabDisplay>
+						<img src = "https://www.inter-fairs.com/Content/img/Logos/45/4500/450094/default.jpg" alt = "Concept Aromatique">
+						<h5>Aromaticien alternant - Concepteur e-liquides</h5>
+						<h5>Septembre 2014 - Août 2015</h5>
+						<hr />
+						<p>Être alternant chez Concept Aromatique m'a responsabilisé. J'étais le seul aromaticien junior sur site dans une entreprise de parfumerie. Avec mon travail nous avons pu délivrer des propositions d'e-liquide pour nos clients. J'ai aussi écrit un mémoire d'alternance concernant la sécurité de ces produits.</p>
+					</div>
+				</div>
+				<h3>Missions ponctuelles</h3>
+				<div id = "xproSmall" class = "flexRow">
+					<div class = "tabDisplay">
+						<!--<img src = "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F40486493%2F39985929818%2F1%2Foriginal.jpg?w=1000&rect=0%2C0%2C1024%2C512&s=ce7bb8660ae540b79d962193abc0192a" alt = "Hackathon fOr toursim">-->
+						<h4>Hackathon fOr Tourism</h4>
+						<h5>6 - 7 Avril 2018</h5>
+						<hr />
+						<p>Organisé par Telecom Valley, ce Hackaton avait pour thème l'innovation dans le tourisme. Avec une équipe de 5 Simploniens (étudiants de Simplon), nous avons proposé une maquette de l'application "PACATravelers" qui doit permettre de guider l'utilisateur vers des lieux touristiques, de manière ludique.</p>
+					</div>
+					<div class = "tabDisplay">
+						<!--<img src = "https://i0.wp.com/carnetdesgeekeries.com/wp-content/uploads/2018/02/Bandeau-Date.jpg" alt = "Festival des Jeux">-->
+						<h4>Festival International des Jeux</h4>
+						<h5>24 - 25 Février 2018</h5>
+						<hr />
+						<p>Avec l'équipe de la société A vous de Jouer !, nous avons exposé sur un stand et fait de la vente de jeux.</p>
+					</div>
+					<div class = "tabDisplay">
+						<!--<img src = "#" alt = "VitaFoods">-->
+						<h4>Convention VitaFoods Genève</h4>
+						<h5>9 - 11 Mai 2017</h5>
+						<hr />
+						<p>Avec l'équipe de Foodarom, nous avons exposé sur un stand dans cet immense salon organisé par PalExpo Genève. Le secteur des compléments alimentaires y rassemble une multitude d'entreprises internationales. Foodarom s'est positionné sur cet évènement comme fournisseur d'arômes alimentaires, dont l'atout est de façonner des solutions à la carte au plus près du client. Cette expérience m'a fait découvrir sur le terrain les enjeux derrière mon travail d'aromaticien.</p>
+			</section>
+			<section id = "xperso" class="infoblocks">
+				<h2>Mes centres d'intérêt</h2>
+				<div id = "xpersoitems" class = "flexRow">
+					<div class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/60/60535.svg" alt = "Photographie">
+						<h4>Photographie</h4>
+						<hr />
+						<p>Instagram, FlickR, photographie Reflex, macro, paysages, portraits,...</p>
+						<p>Petits travaux : photo de classe, shoot portrait.</p>
+					</div>
+					<div class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/149/149646.svg" alt = "Musique">
+						<h4>Musique</h4>
+						<hr />
+						<p>Soundcloud, composition assistée par ordinateur.</p>
+						<p>Chant choral : Chorale de l'Université de Montpellier, Sacred Harp Bremen, Ars Vocalis.</p>
+						<p>Musique électronique, chiptune, vaporwave, chill, microtonal.</p>
+					</div>
+					<div class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/824/824337.svg" alt = "Jeu vidéo">
+						<h4>Jeux vidéo rétro et amateur</h4>
+						<hr />
+						<p>Projets de création de RPG sur RPG Maker.</p>
+						<p>Détournements ("hacks") de ROMs de jeux vidéo : Super Mario World, Pokemon Gold.</p>
+					</div>
+					<div class = "tabDisplay">
+						<img src = "https://image.flaticon.com/icons/svg/0/465.svg" alt = "Cuisine">
+						<h4>Gastronomie</h4>
+						<hr />
+						<p>Restaurant asiatique, oriental, terroir, végane,....</p>
+						<p>Cuisine : légumes, épices, "trucs de grand-mère".</p>
+				</div>
+			</section>
+		</article>
+		<footer>
+			<ul class = flexRow class = "footImg">
+				<a href="https://www.linkedin.com/in/marvin-wortman-01ab2b62/" target="_blank"><li><img src="https://image.flaticon.com/icons/svg/174/174857.svg"></li></a>
+				<a href="https://www.instagram.com/qantuumphotos/?hl=fr" target="_blank"><li><img src="https://image.flaticon.com/icons/svg/174/174855.svg"></li></a>
+				<a href="https://www.flickr.com/photos/wmarvin/" target="_blank"><li><img src="https://image.flaticon.com/icons/svg/174/174849.svg"></li></a>
+				<a href="https://soundcloud.com/marvin-shmn" target="_blank"><li><img src="https://image.flaticon.com/icons/svg/174/174871.svg"></li></a>
+			</ul>
+			<p>Un site conçu par Marvin WORTMAN, 2018</p>
+			<p>*Ce site est conçu sans Bootstrap et sans JQuery</p>
+			<input type = "button" id = "upArrow" value = "&uarr;" onclick = "init()">
+		</footer>
+		<script src = "./js/script.js" rel = "JavaScript" type = "text/javascript"></script>
+	</body>
+
+</html>

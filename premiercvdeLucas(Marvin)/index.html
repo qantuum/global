@@ -1,0 +1,211 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>Lucas Lorenzelli</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"><!--Ajout de police Ubuntu-->
+	</head>
+
+	<body>
+		<div id="wrapperz">
+			<header>
+				<div class="subwrapper">
+					<div class="headerlist">
+						<div class="photo"></div>
+					</div>
+					<div class="headerlist">
+						<ul>
+							<li><h2>LORENZELLI Lucas</h2></li>
+							<li>&#9742; : <a href="tel:0033675733456">06 75 73 34 56</a></li>
+							<li>&#9993; : <a href="mailto:Lorenzellilucas@gmail.com">Lorenzellilucas@gmail.com</a></li>
+							<li>25 ans</li>
+							<li>Permis B</li>
+							<li>377, avenue du Général Garbay</li>
+							<li>Les Villas de Mandelieu</li>
+						</ul>
+					</div>
+				</div>
+				<div class="headerlist">
+					<h1>Stage Développeur Web</h1>
+				</div>
+			</header>
+
+			<section>
+				<div class="title">
+					<h2>Formations</h2>
+				</div>
+				<div class="content">
+					<ul>
+						<li>2018 Développeur Web Simplon Cannes Frayère P1</li>
+						<li>2011-2013 DUT statistique et informatique décisionnelle (IUT de Menton).</li>
+						<li>2010-2011 Baccalauréat Scientifique.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="title">
+					<h2>Compétences</h2>
+				</div>
+				<div class="content">
+					<ul>
+						<li>Langages : HTML, CSS, PHP, JavaScript</li>
+						<li>Frameworks : JQuery, Bootstrap, Symfony, Laravel</li>
+						<li>Recherche et organisation d'informations</li>
+						<li>Gestion de projet</li>
+						<li>Méthodes agiles</li>
+						<li>Ergonomie d'un site</li>
+						<li>Elements interactifs : carte Leaflet, frise chronologiques,...</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="title">
+					<h2>Portfolio</h2>
+				</div>
+				<div class="content portfolioz">
+
+						<ul>
+							<li><button id="openmod"><h3>Gastrono-Geek</h3><img src="./img/gastronogeek.png" alt="crea"></button></li>
+
+								<!--affichage infos dans le modal
+
+
+
+								-->
+								<div id="modalaction" class="modal">
+									<!-- Modal content -->
+						  			<div class="modal-content">
+						    			<span class="close">&times;</span>
+						    			<h3>Site Gastrono-Geek</h3>
+						    			<img src="./img/gastronogeek.png" alt="gastronogeek">
+						    			<p>Le premier site fait sur le terrain en entrant à Simplon. Créé en deux semaines avec une équipe de 5 personnes
+						    			avec un minimum de connaissances.</p>				    				
+						  			</div>
+								</div>
+
+								<script>
+								// Get the modal
+								var modal = document.getElementById('modalaction');
+
+								// Get the button that opens the modal
+								var btn = document.getElementById("openmod");
+
+								// Get the <span> element that closes the modal
+								var span = document.getElementsByClassName("close")[0];
+
+								// When the user clicks the button, open the modal 
+								btn.onclick = function() {
+								    modal.style.display = "block";
+								}
+
+								// When the user clicks on <span> (x), close the modal
+								span.onclick = function() {
+								    modal.style.display = "none";
+								}
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+								    if (event.target == modal) {
+								        modal.style.display = "none";
+								    }
+								}
+								</script>
+								<!--affichage infos dans le modal
+
+
+
+								-->
+
+
+
+							<li><button id="openmod2"><h3>Site de Promotion Simplon</h3><img src="./img/simplonpromo.png" alt="simplonpromo"></button></li>
+
+								<!--affichage infos dans le modal-->
+
+
+
+								
+								<div id="modalaction2" class="modal">
+									<!-- Modal content -->
+						  			<div class="modal-content">
+						    			<span class="close">&times;</span>
+						    			<h3>Site de Promotion Simplon</h3>
+						    			<img src="./img/simplonpromo.png" alt="simplonpromo">
+						    			<p>Un site élaboré à partir d'un cahier des charges. La conception a été faite en équipe de 5 personnes dans un délai de deux jours.</p>				    				
+						  			</div>
+								</div>
+
+								<script>
+								// Get the modal
+								var modal2 = document.getElementById('modalaction2');
+
+								// Get the button that opens the modal
+								var btn2 = document.getElementById("openmod2");
+
+								// Get the <span> element that closes the modal
+								var span2 = document.getElementsByClassName("close")[1];
+
+								// When the user clicks the button, open the modal 
+								btn2.onclick = function() {
+								    modal2.style.display = "block";
+								}
+
+								// When the user clicks on <span> (x), close the modal
+								span2.onclick = function() {
+								    modal2.style.display = "none";
+								}
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+								    if (event.target == modal2) {
+								        modal2.style.display = "none";
+								    }
+								}
+								</script>
+								<!--affichage infos dans le modal
+
+
+
+								-->
+						</ul>	
+
+				</div>
+			</section>
+
+			<section>
+				<div class="title">
+					<h2>Langues</h2>
+				</div>
+				<div class="content">
+					<ul class="langs">
+						<li><img width="60px" src="https://image.flaticon.com/icons/svg/197/197560.svg" alt="french"><p> : </p><img width="40px" src="https://image.flaticon.com/icons/svg/148/148839.svg" alt="star"><img width="40px" src="https://image.flaticon.com/icons/svg/148/148839.svg" alt="star"><img width="40px" src="https://image.flaticon.com/icons/svg/148/148839.svg" alt="star"><img width="40px" src="https://image.flaticon.com/icons/svg/148/148839.svg" alt="star"><img width="40px" src="https://image.flaticon.com/icons/svg/148/148839.svg" alt="star"></li>
+
+						<li><img width="60px" src="https://image.flaticon.com/icons/svg/197/197374.svg" alt="english"><p> : </p><img width="40px" src="https://image.flaticon.com/icons/svg/148/148839.svg" alt="star"><img width="40px" src="https://image.flaticon.com/icons/svg/148/148839.svg" alt="star"><img width="40px" src="https://image.flaticon.com/icons/svg/148/148839.svg" alt="star"><img width="40px" src="https://image.flaticon.com/icons/svg/149/149220.svg" alt="nostar"><img width="40px" src="https://image.flaticon.com/icons/svg/149/149220.svg" alt="nostar"></li>						
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="title">
+					<h2>Information Complémentaire</h2>	
+				</div>
+				<div class="content">
+					<ul>
+						<li>Sport : tennis.</li>
+					</ul>
+				</div>
+			</section>
+
+			<footer>
+				<ul>
+					<li><a href="#"><img src="https://image.flaticon.com/icons/svg/174/174857.svg" width="40px"></a></li>
+					<li><a href="#"><img src="https://image.flaticon.com/icons/svg/174/174848.svg" width="40px"></a></li>
+				</ul>
+			</footer>
+		</div>
+	</body>
+</html>

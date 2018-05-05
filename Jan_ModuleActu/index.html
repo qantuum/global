@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <!-- Encodage UTF-8 pour les caractères spéciaux -->
+  <meta charset="utf-8"/>
+  <!-- Appel de la feuille de style css -->
+  <link rel="stylesheet" type="text/css" href="actu.css">
+  <!-- Titre de l'onglet -->
+  <title>Widget Actualitées</title>
+</head>
+<!-- Aside qui regroupe la parti du haut du widget (boutons: facebook, twitter et le masquer/afficher) et la partie du bas pour les TimeLine respectivent -->
+  <aside>
+    <div id="actu">
+        <!-- Partie du haut (boutons et Logos) -->
+        <div id="ico">
+          <img id="fb" src="./img/facebook.png"/>
+          <img id="twitter" src="./img/twitter.png"/>
+          <img id="hide" src="./img/hide.png"/>
+        </div>
+          <!-- Partie TimeLine (Facebook, Twitter) -->
+      <div id="contenu">
+        <!-- TimeLine facebook récupérer via un iFrame obtenue sur facebook developer -->
+        <div id="facebookTimeLine"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimploncannesfrayere%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=201258330652607" width="330" height="500" style="overflow:hidden;border:none" scrolling="no" allow="encrypted-media"></iframe></div>
+        <!-- TimeLine twitter récupérer via un simple "href" pas d'iFrame pour twitter, mais doit avoir son script  -->
+        <div id="twitterTimeLine"><a class="twitter-timeline" data-width="330" data-height="500" href="https://twitter.com/SimplonCannes?ref_src=twsrc%5Etfw">Tweets by SimplonCannes</a></div>
+      </div>
+    </div>
+    <!-- Division permettant d'afficher le une fois le bouton 'hide' enclenché -->
+      <div id="display"></div>
+  </aside>
+    <!-- Script "async src" sert à la construction du HTML de la TimeLine de twitter, fourni par leur service de développeurs -->
+  <script async src="https://platform.twitter.com/widgets.js"></script>
+    <!-- Appel du script JavaScript pour le fonctionnement des boutons  -->
+  <script src="actu.js"></script>

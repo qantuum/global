@@ -1,0 +1,47 @@
+div{
+	height: 100%;
+	width: 100%;
+}
+table{
+	min-height: 50%;
+	width: 100%;
+	border: 1px solid black;
+}
+th{
+	width: 14.20%;
+	border: 1px solid black;
+}
+td{
+	border: 1px solid black;
+	height:30px;
+	text-align: center;
+}
+.monthempty{
+	height:30px;
+	background-color: lightgrey;
+}
+.dayNow{
+	font-weight: bold;
+	background-color: #12900F;
+	color: white;
+}
+.dayNow:hover{
+	font-weight: bold;
+	background-color: #A7F6AD;
+	color: black;
+}
+.monthy input{
+	border-radius: 25%;
+	font-weight: bold;
+	margin: 10px 10px;
+	padding: 5px;
+	background-color: #424141;
+	color: #FBFBFB;
+}
+.monthy{
+	background-color: #E9ADAD;
+}
+.headth{
+	display: inline-block;
+	width: 150px;
+}

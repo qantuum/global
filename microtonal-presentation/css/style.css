@@ -138,3 +138,52 @@ a:hover {
 .para {
 	width: 45%;
 }
+
+.musicins ul {
+	display: flex;
+	flex-flow: inline wrap;
+	justify-content: space-around;
+}
+
+.musicins li {
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+	color: silver;
+}
+
+.musicins a {
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+	color: silver;
+}
+
+.musicins a:hover {
+	color: white;
+}
+
+.musicins img:hover {
+	box-shadow: 5px 5px 5px pink;
+	filter: brightness(150%);
+}
+
+.sourcestab ul {
+	display: flex;
+	flex-flow: column wrap;
+	texte-align: left;
+	color: silver;
+	height: 500px;
+}
+
+.sourcestab li {
+	display: flex;
+	flex-flow: inline wrap;
+	padding: 1px;
+	font-size: 0.9em;
+
+}
+
+.sourcestab a img {
+	width: 20px;
+}

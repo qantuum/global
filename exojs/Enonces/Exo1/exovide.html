@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<title>Essai DHTML</title>
+<meta charset="UTF-8">
+<script>
+	
+	function ajout()
+		{
+
+		var newItem = document.createElement("li");
+		var texte = document.createTextNode(prompt("entrez un item de liste de courses svp"));	
+		newItem.appendChild(texte);
+		var selectPos = document.getElementById("listecommissions");
+		selectPos.appendChild(newItem);
+		
+		}
+	
+</script>
+
+</head>
+<body onclick="ajout()">
+
+<ul id="listecommissions">
+	<li>1kg de farine</li>
+	<li>un pack de lait</li>
+</ul>
+
+</body>
+</html>

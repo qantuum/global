@@ -1,0 +1,126 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>JS (désactiver commentaires)</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<!--Exercices de js faits avec le cours "js2" le 30.03.18-->
+	<body>
+
+    	<div id="pasteque"></div>
+    
+
+		<script>
+			/*var j = 2;
+
+			while (j > 1) {
+
+				alert("Bienvenue sur le site ! ");
+
+				var age = parseInt(prompt("Taper âge"));
+				alert("Ton âge est " + age + " ans.");
+
+				switch (true) {
+				  case (age >= 0 && age <18):
+				    alert('TU ES UN BB. LA VI AI DEVAN TOI');
+				    break;
+				  case (age >= 18 && age <50):
+				    alert('TU ES UN ESCLAVE DU SYSTEME. TRAVAILLE BIEN ET DONNE NOU TON ARJEN');
+				    break;
+				  case (age >= 50 && age <60):
+				    alert('TU ES ENCORE UN ESCLAVE, MAIS EN PLUS TU AS DES PROBLEMES D\'ARTICULATIONS. BONNE CHANCE !')
+				    break;
+				  case (age >= 60 && age <120):
+				    alert('BRAVO, TU ES UNE MOMIE');
+				    break;		    
+				  default:
+				    alert('TU N\'AS PAS SUIVI LA CONSIGNE MONSIEUR MADAME');
+				    break;
+					}
+			} exercice 1 - FIN*/
+
+			/*var nomstack = "Prénoms : ";
+			var nbr = parseInt(prompt("Rentrez une liste de noms. Combien de noms voulez vous rentrer ?"));
+			
+			while (nbr > 0) {
+				var nom = prompt(nbr + " ème nom");
+				nomstack += nom + ", ";
+
+				nbr--;
+			}
+
+			alert(nomstack);
+			---fin exercice 2*/
+
+			/*var nb = parseInt(prompt("Nb de noms ?"));
+			var noms = "";
+
+			while (nb < 0) {
+				nb = parseInt(prompt("Nb de noms ? (nombre est positif ou nul)"));
+			}
+
+			for (var i = 0; i < nb; i++) {
+				noms += prompt("un nom svp !") + "\n"; //le \n en fait ça fait aller à la ligne !!!
+				// ou noms = noms + prompt(" un nom svp ! ");
+			}
+
+			alert(noms);
+			---fin exercice 2 --- corrigé 1*/
+
+
+			/*var nb = parseInt(prompt("Nb de noms ?"));
+			var noms = "";
+
+			while (nb < 0) {
+				nb = parseInt(prompt("Nb de noms ? (nombre est positif ou nul)"));
+			}
+
+			while (nb > 0) {
+				nb--;
+				document.getElementById('pasteque').innerHTML += prompt("un nom svp !") + "<br />"
+			} fin exercice 2 --- corrigé 2*/
+
+			//marche aussi avec test = document.querySelectorAll(".test"); (si classe CSS s'appelle test et que la variable test est définie) --- voir fichier correction par Rémi pour la suite.
+
+			//grâce à mon JS je peux modifier mon HTML en direct live ! et ça utilise les ressources de l'utilisateur !!!
+
+			//privilégiez de préférence les codes les plus courts possibles !!! moins de fonctions, moins de variables, égale moins de ressources utililisées.	
+
+
+			/*Exercice 3 --- Écrivez un programme en javascript permettant à l’utilisateur de saisir un nombre quelconque de valeurs, qui devront être stockées dans un tableau. L’utilisateur doit donc commencer par entrer le nombre de valeurs qu’il compte saisir. Il effectuera ensuite cette saisie. Enfin, une fois la saisie terminée, le programme affichera le nombre de valeurs négatives et le nombre de valeurs positives. 
+			Le programme doit obligatoirement contenir au moins une boucle !
+			Le code html doit être le suivant et ne doit pas être modifier :*/	
+
+			var pos = [];
+			var neg = [];
+			alert("on va faire une saisie de chiffres");
+			var want = parseInt(prompt("combien de nombres saisissez-vous ?"));
+
+			while (want > 0) {
+
+				var nb = parseInt(prompt("saisissez un chiffre. la saisie est finie quand l'entrée n'est pas un chiffre"))
+
+				if (nb >= 0) {
+					pos.push(nb);
+				}
+				else {
+					neg.push(nb);
+				}
+
+				want--;							
+			}
+
+			document.getElementById('pasteque').innerHTML += "Il y a " + pos.length + " nombres posiifs" + " et " +  neg.length + " nombres négatifs."
+
+
+
+
+		</script>
+
+
+
+	</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title></title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"><!--Ajout de police Ubuntu-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<style>
+			* {
+				padding:0;
+				margin:0;
+				font-size:12px;
+			}
+			
+			ul {
+				padding:0;
+				list-style:none;
+			}
+			
+			p, li, h1, h2, h3, h4, h5, h6 {
+				font-size:1em;
+			}
+
+			img {
+				width:300px;
+			}
+
+			#imgs img {
+				width:100px;
+			}
+
+			#imgs img:hover {
+				border: 2px solid grey;
+				box-sizing: border-box;
+			}
+
+			#box {
+				display:flex;
+				flex-flow:row wrap;
+				justify-content: space-around;
+			}
+		</style>
+	</head>
+	<body>
+
+		<section id="box">
+			<div id="imgs">
+				<ul>
+					<li id="kitsune" class="hover"><img src="https://www.jouetsetcadeauxpourtous.fr/medias/images/peluche-renard-gros-yeux-keel-toys-peluche-toute-douce.jpg"></li>
+					<li id="teddy" class="hover"><img src="https://ressources.mynoors.com/files/pages/mini/2015/08/12/nounours-happy-marron-35cm-keeltoys-5040.jpg"></li>
+					<li id="barbapapa" class="hover"><img src="http://www.imagespourtoi.com/lesimages/barbapapa/image-barbapapa-1.jpg"></li>
+					<li id="haddock" class="hover"><img src="http://fr.ubergizmo.com/wp-content/uploads/2016/07/capitaine-haddock-immortel.jpg"></li>
+				</ul>
+			</div>
+
+			<div id="details">
+				<ul>
+					<li><img src="https://www.pioupiou-et-merveilles.fr/2116/coucou-ourson.jpg"></li>
+					<li><h3>Teddy KOUKOU RASTAKOUERE</h3></li>
+					<li><h2>Citation</h2></li>
+					<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt.</p></li>
+			</div>
+		</section>
+
+
+		<script>
+			var kitsune = document.getElementById("kitsune").addEventListener("mouseover", function(){
+			displayInfo("https://www.jouetsetcadeauxpourtous.fr/medias/images/peluche-renard-gros-yeux-keel-toys-peluche-toute-douce.jpg", "Kitsune RSA")}, false);
+			
+
+			var teddyboy = document.getElementById("teddy").addEventListener("mouseover", function(){
+			displayInfo("https://ressources.mynoors.com/files/pages/mini/2015/08/12/nounours-happy-marron-35cm-keeltoys-5040.jpg", "Tedyboy RSA")}, false);
+			
+
+			var barbapapa = document.getElementById("barbapapa").addEventListener("mouseover", function(){
+			displayInfo("http://www.imagespourtoi.com/lesimages/barbapapa/image-barbapapa-1.jpg", "Berb EPEPE")}, false);
+			
+
+			var haddock = document.getElementById("haddock").addEventListener("mouseover", function(){
+			displayInfo("http://fr.ubergizmo.com/wp-content/uploads/2016/07/capitaine-haddock-immortel.jpg", "Ronald DOQUE")}, false);
+
+			function displayInfo(src, label) {
+				document.querySelector("#details img").setAttribute("src", src);
+				document.querySelector("#details h3").innerHTML=label;				
+			}
+
+
+    		var hover = Array.from(document.querySelectorAll(".hover"));
+    		var element;
+    		
+    		for (i = 0; i < hover.length; i++) {
+        		element = hover[i];
+       			element.addEventListener("mouseout", displayDefaultInfo);
+    		}//là c'est simple je fais le mouseout donc on retourne au paramètre par défaut
+
+    		function displayDefaultInfo() {
+				for (i = 0; i < hover.length; i++) {
+					document.querySelector("#details img").setAttribute("src", "https://www.pioupiou-et-merveilles.fr/2116/coucou-ourson.jpg");
+					document.querySelector("#details h3").innerHTML="Teddy KOUKOU RASTAKOUERE";
+					document.querySelector("#details h3").style.color="inherit";
+				}
+			}//donc voilà poof, facile
+		</script>	
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> body {
+background-color: blue;}
+
+.cleopatre {
+color: pink;
+float: right;
+font-size: 40px;
+padding : 30px;}
+</style>
+<meta charset="utf-8">
+</head>
+
+
+<body>
+
+<ul>
+<li id="cool">Georges</li>
+<li>Jérôme</li>
+<li>Eusèbe</li>
+<li>Jean-Patrick</li>
+<li>Plutraque</li>
+<li>Aristaque</li>
+<li>Cicéron</li>
+<li>Salomé</li>
+<li>Euréka</li>
+<li>Poupignette</li>
+</ul>
+
+<button id="btn">COLORZZZZZZ</button>
+<!--onclick="myFunction()"-->
+
+
+<script>
+/*function myFunction() {
+	//alert("le JS c'est fantasturique");
+    
+    var colorez = document.getElementsByTagName("li");
+    
+    for(var i = 0; i < colorez.length; i += 2) {
+    colorez[i].classList.add("cleopatre");
+    }
+}*/
+
+var btn = document.getElementById("btn");
+btn.onclick = function(){
+    lis = document.getElementsByTagName("li");
+    for (var i = 0; i < lis.length; i++) {
+        if (i%2 ==0) {
+            lis[i].style.color = "red";
+        }
+        else{
+            lis[i].style.color = "green";
+        }
+    }
+}//script de Michael
+</script>
+
+</body>
+</html>

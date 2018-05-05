@@ -1,0 +1,138 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>Timer</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"><!--Ajout de police Ubuntu-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<style>
+			body {
+				background-color : hsl(290, 100%, 90%);
+			}
+
+			fieldset {
+				background-color : hsl(0, 0%, 90%);
+				width : 600px;
+			}
+
+			legend {
+				font-family : "Ubuntu", Arial, sans-serif;
+			}
+
+			#displaytimer {
+				background-color : purple;
+				color : white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<fieldset id = "timer">
+			<legend>Bienvenue dans le très très Timer.</legend>
+			<input type = "button" id = "launch" value = "Lancer le timer">
+			<input type = "text" id = "displaytimer" disabled>
+			<input type = "button" id = "pause" value = "Pause ||">
+			<input type = "button" id = "reset" value = "Remise à zéro">
+		</fieldset>
+		<script>
+			//création des variables (hors-fonctions);
+			var pause;
+			var pauseButton;
+			var currentTime;
+			var today;
+			var timeStarts;
+			var decreaseTime;
+			var launch;
+			var reset;		
+
+			//initialisation du temps;
+			function init() {
+				pauseButton = document.getElementById("pause"); //identification des différents boutons;
+				launch = document.getElementById("launch");
+				reset = document.getElementById("reset");
+				reset.disabled = false; //Réactivation du bouton reset;
+				pause = true; //fonctionnement du bouton "Pause";
+				pauseButton.value = "Pause ||";
+				pauseButton.disabled = true;
+				currentTime = document.getElementById("displaytimer"); //affichage du temps dans case texte;
+				today = new Date(); //création d'une date d'aujourd'hui à ce moment précis;
+				timeStarts = new Date(today.getYear(), today.getMonth(), today.getDate(), 0, 0, 0); //pour mettre l'heure à 0 !;
+				currentTime.value = timeStarts.getHours() + ":" + timeStarts.getMinutes() + ":" + timeStarts.getSeconds() + ":" + timeStarts.getMilliseconds(); //affichage de "0:0:0:0" (heures:minutes:secondes:millisecondes);
+				document.getElementById("launch").addEventListener("click", timerLaunch); //traitement des clics boutons;
+				document.getElementById("pause").addEventListener("click", timerPause);
+				document.getElementById("reset").addEventListener("click", timerReset);
+				document.getElementById("displaytimer").style.backgroundColor = "purple";
+			}
+
+			//exécution de "init" dès l'ouverture de la page !
+			init();
+
+			//Clic sur le Lancement;
+			function timerLaunch() {
+
+				var hour;
+				var minut;
+				var second;
+
+				while (isNaN(hour) || isNaN(minut) || isNaN(second) || hour > 24 || hour < 0 || minut < 0 || second < 0 || minut > 1440 || second > 86400 || (hour * 3600 + minut * 60 + second) > 86401) {
+
+					alert("Saisissez votre temps de timer. L'affichage est limité à 24 heures. Chaque valeur doit être renseignée (même si égale à 0).")
+					hour = parseInt(prompt("Combien d'heures?"));
+					minut = parseInt(prompt("Combien de minutes?"));
+					second = parseInt(prompt("Combien de secondes?"));
+				}
+				//simple, on demande à l'utilisateur de saisir un nombre valide !;
+
+				timeStarts.setHours(hour);
+				timeStarts.setMinutes(minut);
+				timeStarts.setSeconds(second);
+				launch.disabled = true;
+				reset.disabled = true;
+				pauseButton.disabled = false;
+				decreaseTime = setInterval(decreaseT, 10);
+
+			}
+
+			//évènement à chaque fois que l'intervalle revient;
+			function decreaseT() {
+					timeStarts.setMilliseconds(timeStarts.getMilliseconds() - 10);
+					currentTime.value = timeStarts.getHours() + ":" + timeStarts.getMinutes() + ":" + timeStarts.getSeconds() + ":" + timeStarts.getMilliseconds();
+					if (timeStarts.getMinutes() == 0 && timeStarts.getSeconds() == 0 && timeStarts.getMilliseconds() == 0) {
+						clearInterval(decreaseTime);
+						document.getElementById("displaytimer").style.backgroundColor = "blue";
+						alert("BIP BIP!");
+						launch.disabled = false;
+						timerReset();
+					}
+			}
+
+			//clic sur le bouton Pause;
+			function timerPause() {
+				if (pause == true) {
+					pauseButton.value = "Reprendre >"
+					clearInterval(decreaseTime);
+					reset.disabled = false;
+					pause = false;
+				}
+
+				else {
+					pauseButton.value = "Pause ||"
+					decreaseTime = setInterval(decreaseT, 10);
+					reset.disabled = true;
+					pause = true;
+				}
+			}
+
+			//clic sur le bouton Reset;
+			function timerReset() {
+				clearTimeout(decreaseTime);
+				pause = true;
+				launch.disabled = false;
+				init();
+			}
+
+
+		</script>
+	</body>
+</html>

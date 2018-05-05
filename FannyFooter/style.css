@@ -1,0 +1,31 @@
+/*<FOOTER>*/
+#pieddepage{
+	background-color: black;
+	height: 30%;
+	width: 100%;
+	bottom: 0px;
+	position: absolute;
+
+}
+
+.reseaux{
+	height:50%;
+	padding: 1.2% 20% 0 20%;
+	display: flex;
+}
+.reseaux>a {
+	display: block;
+	height: 100%;
+	width: 60%;
+	margin: 0 2.5%;
+	text-align: center;
+}
+.reseaux img{
+	height: 55%;
+}
+.copyright p{
+	color: white;
+	text-align: center;
+	font-size: 1.2em;
+	margin: 0;
+}

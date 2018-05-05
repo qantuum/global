@@ -1,0 +1,147 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>Menuburger</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet"><!--Ajout de police Ubuntu-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+
+			body {
+				width: 20%;
+				margin: auto;
+			}
+
+			header {
+				background-color: pink;
+				height: 300px;
+				width: 100%;
+				display: flex;
+				flex-flow: row;
+				align-items: center;
+				align-content: center;
+			}
+
+			header ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			#burgerli, #noseli {
+				margin-left: 30px;
+				border-radius: 20px;
+				border: 2px outset black;
+				cursor: pointer;
+				background-color: white;
+			}
+
+			header img {
+				width: 150px;
+				border-radius: inherit;
+				
+			}
+
+			nav {
+				position: absolute;
+				width: 10%;
+				top: 20%;
+				left: 40%;
+				display: none;
+				z-index: 50;
+			}
+
+			div {
+				text-align: justify;
+				z-index: 0;
+			}
+
+			#menut ul {
+				list-style: none;
+			}
+
+			#menut li:nth-child(1) {
+				background-color: red;
+			}
+
+			#menut li:nth-child(2) {
+				background-color: orange;
+			}
+
+			#menut li:nth-child(3) {
+				background-color: yellow;
+			}
+
+			#menut li:nth-child(4) {
+				background-color: green;
+			}
+
+			#menut li:nth-child(5) {
+				background-color: blue;
+				color: white;
+			}
+
+			#menut li:nth-child(6) {
+				background-color: indigo;
+				color: white;
+			}
+
+			#menut li:hover {
+				background-color: black;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<ul>
+				<li id="burgerli"><img id="burger" src="https://cdn1.iconfinder.com/data/icons/homosexual-cartoon-2/512/g24518-512.png"></li>
+				<li id="noseli"><img id="noseCyrano" src="https://www.medespoir.com/images/rhinoplastie-augmentation.jpg"></li>
+			</ul>
+		</header>
+		<nav id="menut">
+			<ul>
+				<li>Magie</li>
+				<li>Magie</li>
+				<li>Magie</li>
+				<li>Magie</li>
+				<li>Magie</li>
+				<li>Magie</li>
+			</ul>
+		</nav>
+		<div>
+
+			<h4>Clic sur licorne pour avoir un menu arc-en-ciel</h4>
+			<h4>Clic sur le nez pour enlever les accents de l'extrait de Cyrano.</h4>
+			<p id="cyrano">Je jette avec grâce mon feutre, je fais lentement l'abandon du grand manteau qui me calfeutre, et je tire mon espadon, élégant comme céladon, agile comme scaramouche, je vous préviens, cher Mirmidon, qu'à la fin de l'envoi, je touche!</p>
+		<script>
+			var burger = document.getElementById("burger").addEventListener("click", burgerOpen);
+			var nose = document.getElementById("noseli").addEventListener("click", changeAccent);
+			var menu = document.getElementById("menut");
+			var opened = false;
+
+			function burgerOpen() {
+				if(opened == false) {
+					menu.style.display = "block";
+					opened = true;
+				}
+				else {
+					menu.style.display = "none";
+					opened = false;
+				}			
+			}
+
+			function changeAccent() {
+				var para = document.getElementById("cyrano").innerHTML;//j'attrape mon paragraphe;
+				document.getElementById("cyrano").innerHTML = para.replace(/â/g, "a");///je fais mon remplacement;
+				para = document.getElementById("cyrano").innerHTML;//je n'oublie pas de réattraper mon nouveau paragraphe !!!;
+				document.getElementById("cyrano").innerHTML = para.replace(/é/g, "e");
+				para = document.getElementById("cyrano").innerHTML;
+				document.getElementById("cyrano").innerHTML = para.replace(/à/g, "a");
+			}
+
+		</script>
+	</body>
+</html>

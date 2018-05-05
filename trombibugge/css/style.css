@@ -1,0 +1,114 @@
+html {
+
+display: block;
+word-wrap: break-word; /* Retour à la ligne en bout de page */
+font-size: 100%;
+font-family: 'Quicksand', sans-serif;
+
+
+}
+
+h1 {
+
+font-family: 'Open Sans', sans-serif;
+
+}
+
+.trombinoscope { /* Conteneur contenant les div du trombinoscope: .cercle et .descriptif */
+
+display: flex;
+justify-content: center;
+position: relative;
+flex-wrap: nowrap;
+max-width: 100%;
+background-color: #f7f7f7;
+
+}
+
+.trombinoscope hr { /* Barre de séparation */
+
+width: 0.5px;
+height: 700px;
+
+}
+
+.cercle img {
+
+position: absolute;
+height: 80px;
+width: 80px;
+border-radius: 10%;
+
+}
+.cercle img:hover {
+
+position: absolute;
+height: 100px;
+width: 100px;
+border-radius: 10%;
+z-index: 50;
+
+}
+
+
+.cercle {
+
+width: 70%;
+height: 700px;
+
+}
+/*SECTION INDIVIDUELLE-------------*/
+#individuelle{
+
+	width: 30%;
+	height: auto;
+	margin-right: 1%;
+}
+
+.descriptif {
+
+	padding: 1%;
+	text-align: center;
+	width: 100%;
+
+}
+
+.descriptif img {
+
+	height: 300px;
+	width: 300px;
+	border-radius: 5%;
+	margin-top: 4%;
+	margin-left: 5%;
+	margin-right: 5%;
+
+}
+
+.blank {
+	height:700px;
+}
+
+.pedigree{
+	
+	height: 80%;
+	width: 100%;
+	/*padding-left: 10%;
+	padding-right: 10%;*/
+	text-align: center;
+
+}
+#textePerso{
+	height: 50%;
+	width: 80%;
+	margin: 2% auto;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 5%;
+	border: 1px solid red;
+	border-radius: 5%;
+	background-color: #E80041;
+	font-weight: bold;
+	text-align:justify;
+	color: #fff;
+}
+

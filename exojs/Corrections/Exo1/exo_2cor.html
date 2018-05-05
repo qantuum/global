@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<title>Essai DHTML</title>
+<meta charset="UTF-8">
+<script>
+	
+	function ajout()
+		{
+
+			liste=document.getElementById("listecommissions");
+			texte=document.getElementById("course").value;
+			
+			nouveauli=document.createElement("li");
+			nouveauli.innerHTML=texte;
+			
+			liste.appendChild(nouveauli);
+		
+		}
+	
+</script>
+
+</head>
+<body>
+
+<input type="text" id="course"><input type="button" value="OK" onclick="ajout()">
+
+<ul id="listecommissions">
+	<li>1kg de farine</li>
+	<li>un pack de lait</li>
+</ul>
+
+
+</body>
+</html>

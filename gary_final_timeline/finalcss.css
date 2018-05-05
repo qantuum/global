@@ -1,0 +1,242 @@
+h1, header {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+h5, p{
+  font-family: 'Quicksand', sans-serif;
+}
+
+header {
+  letter-spacing: 8px;
+  padding: 5px;
+}
+
+/*Container de base (wrapper)*/
+#TimeLineContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  border-bottom: 1px solid black;
+}
+
+.act_month {
+  letter-spacing: 10px;
+  font-size: 30px;
+  color: black;
+  align-items: center;
+
+
+}
+
+/*Bouton de selection de mois*/
+.button {
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: black;
+  margin: 0px;
+}
+
+ .act_month:hover {
+  color: #E80041;
+  transition: 0.3s;
+
+}
+
+.button:hover {
+  color: #E80041;
+  transition: 0.3s;
+}
+
+/*Nom du mois*/
+#month {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  background: #f7f7f7;
+  border: 2px solid #777777;
+}
+
+/*Titre de la timeline ("Weekly Scheduele")*/
+#name {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  background: #E80041;
+  font-size: 10px;
+  align-items: center;
+  letter-spacing: 10px;
+  color: white;
+  border: 2px solid #777777;
+  border-top: none;
+}
+
+/*Div globale des semaines
+  Aère un peu la page*/
+#weeks {
+  display: flex;
+  padding-top: 100px;
+  height: 100px;
+  border: 2px solid #777777;
+  border-top: none;
+  border-bottom: none
+}
+/*Div des semaines (week 1, 2...)*/
+.act_week {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+
+}
+
+/*Alterne les couleurs des semaines*/
+#weeks div:nth-child(odd) {
+  background: #777777;
+}
+
+#weeks div:nth-child(even) {
+background: #f7f7f7;
+}
+
+
+/*div "boutons" en dessous de la semaine,
+  faisant apparaitre le block de texte
+  avec le hover dessus*/
+
+.point {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 85%;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #E80040;
+  border-radius: 50%;
+}
+
+/*Div definissant le block de texte
+  apparaissant avec le hover*/
+
+.text {
+  position: fixed;
+  flex-direction: column;
+  width: 80% -;
+  border: 1px solid black;
+  margin-top: 15px;
+  left: 11%;
+  right: 11%;
+  word-wrap : break-word;
+  height: auto;
+}
+
+/*Titre du block de texte
+  apparaissant avec le hover*/
+.small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E80040;
+  height: 20%;
+  color: white;
+}
+
+/*Cache les div de week initialement
+  (n'apparaitront que lors du hover)*/
+#week1,#week2,#week3,#week4,#week5{
+    display: none;
+}
+
+.textCache {
+  padding: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  background: white;
+}
+
+/**********************RESPONSIVE A PARTIR DE 600PX POUR MOBILES****************************/
+
+@media screen and (max-width: 500px) {
+  /*Container general*/
+  #TimeLineContainer {
+    border-bottom: none;
+  }
+
+.act_month {
+  font-size: 15px;
+}
+
+.button {
+  font-size: 20px;
+}
+
+
+  /*Titre de la timeline ("Weekly Scheduele")*/
+  #name {
+    height: 80px;
+    text-align: center;
+  }
+  /*Div des semaines (week 1, 2)
+    Disposition en colonnes
+  */
+  #weeks {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 30%;
+    padding: 0px;
+    padding-left: 0px;
+    border-right: 1px solid black;
+  }
+
+/*div "boutons" a coté des semaines,
+  Hover les "boutons" fera apparaitre le texte
+  Hover le block de texte le fera rester a l'écran
+*/
+  .point {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #E80040;
+    z-index: 2;
+    left: 91%;
+    top: 40%;
+  }
+
+  /*CLASSE TEXT DEFINIT L'EMPLACEMENT DES BOITES DE TEXTE
+    Elles sont fixées a un emplacement pour une lecture plus facile*/
+  .text {
+    background-color: white;
+    position:fixed;
+    top: 145px;
+    left: 36%;
+    width:52%;
+  }
+  /*Titre de la boite apparaissant par hover*/
+  .small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E80040;
+    height: 20%;
+    color: white;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  /*span englobant la boite de texte apparaissant avec le hover*/
+  span .text {
+   margin-left: 200px;
+  }
+  /*Definition des tailles de polices*/
+  /*taille de police pour paragraphes*/
+ .textCache {
+   background: white;
+ }

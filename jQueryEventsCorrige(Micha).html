@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title> Les Evenements </title>
+	<meta name="description" content="Description du site">
+	<meta name="viewport" content="width=device-width,initial-scale=1">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.container{
+		width: 80%;
+		margin: 0 auto;
+		background-color: #f1f2f6;
+		padding: 15px;
+	}
+	h1{
+		text-align: center;
+	}
+	h2{
+		padding: 20px;
+	}
+	#bloc1{
+		width: 150px;
+		height: 150px;
+	}
+	.vert{
+		background-color: #20bf6b;
+	}
+	.bleu{
+		background-color: #2d98da;
+	}
+	.rouge{
+		background-color: #e74c3c;
+	}
+	#para1{
+		background-color: #d1d8e0;
+	}
+	.bloc2{
+		display: inline-block;
+		border: 1px solid black;
+		width: 150px;
+		height: 150px;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		margin: 20px;
+		line-height: 150px;
+	}
+	#result{
+		width: 250px;
+		height: 350px;
+	}
+	button{
+
+		background-color: #34495e;
+		color: #ecf0f1;
+		padding: 10px 30px;
+	}
+</style>
+
+
+</head>
+<body>
+	<div class="container">
+		<h1>Les Evenements</h1>
+		<h2>Exercice 1 : </h2>
+		<p>Grâce à Jquery, changez la couleur du carré vert en bleu lorsque la souris rentre dedans puis le remettre en vert lorsque la souris en sort.</p>
+		<div id="bloc1" class="vert"></div>
+		<h2>Exercice 2 : </h2>
+		<p>Grâce à Jquery, faites en sorte que le texte tapé dans le champs ci-dessous soit repporté "en live" dans le paragraphe ayant l'id para1</p>
+		<input type="text" name="champ1" id="champ1"><p id="para1">le texte doit s'afficher ici</p>
+		<h2>Exercice 3 (boss final) : </h2>
+		<p>Les carrés ci-dessous présentent chacuns soit des nombres , pairs et impairs, soit des chaines de caractere.<br>
+			Premiere étape : en Jquery, faites en sorte que quand le pointeur de la souris passe au dessus d'un carré , le comportement suivant soit déclenché :<br>
+			Si le nombre est pair, le carré devient <span class="vert">vert</span>(vous pouvez utiliser la classe déja disponible).<br>
+			Si le nombre est impair, le carré devient <span class="rouge">rouge</span>(vous pouvez utiliser la classe déja disponible).<br>
+			Si c'est une chaine de caractères, le carré devient <span class="bleu">bleu</span>(vous pouvez utiliser la classe déja disponible).<br>
+		</p>
+		<div class="bloc2">1</div>
+		<div class="bloc2">2</div>
+		<div class="bloc2">A</div>
+		<div class="bloc2">56</div>
+		<div class="bloc2">Simplon</div>
+		<div class="bloc2">73</div>
+		<br>
+
+		<h2>Exercice 3 (boss final:p2) : </h2>
+		<p>Dernière phase : Faites en sorte que quand le bouton "Afficher tout" est cliqué, les informations concernant le contenu des carrés sont affichées dans le paragraphe ayant l'id result....Une seule fois(des clics supplémentaires ne font rien)<br>
+		exemple : 1 = impair ; 2 = pair, A = chaine de caractères, etc... </p>
+		<button id="btn">Afficher tout</button>
+		<p id="result"></p>
+	</div>
+
+
+	<script>
+		$( document ).ready(function() {
+    		// Tapez votre code Jquery ici
+    	// Correction exo 1
+	    		$("#bloc1").on({
+	    			//quand la souris entre, cet element se voit retiré la classe vert et ajouté la bleu
+	    			mouseenter:function(){
+	    			$(this).removeClass("vert").addClass("bleu");
+	    			//quand la souris sort, cet element se voit retiré la classe bleu et ajouté la vert
+	    		},mouseleave:function(){
+	    			$(this).removeClass("bleu").addClass("vert");}
+	    		});
+
+	    	// Correction alternative
+	    		$("#bloc1").hover(function(){
+	    			$(this).removeClass("vert").addClass("bleu");	    			
+	    		},function(){
+	    			$(this).removeClass("bleu").addClass("vert");
+	    		})
+
+	    	// Correction exo2
+	    		//Quand une touche est relevée, le texte du para1 se voit attribué le contenu du champ1
+	    		$("#champ1").on("keyup",(function(){
+	    			 $("#para1").text($("#champ1").val());
+	    		}));
+
+	    	// Correction exo3	
+	    		$(".bloc2").hover(function(){
+	    			//Quand le pointeur entre dans un élément bloc2, test si son contenu est numerique
+	    			if ($.isNumeric($(this).text())) {
+	    				//si pair, cet élément prend la classe vert
+	    				if ($(this).text()%2 == 0) {
+	    					$(this).addClass("vert");
+	    				}else{
+	    				//si non pair(impair), prend la classe rouge	
+	    					$(this).addClass("rouge");
+	    					}
+	    			}else {
+	    				//si non numerique, prend la classe bleu
+	    					$(this).addClass("bleu");
+	    				}
+	    			},function(){
+	    				//Quand le pointeur sort, l'élément se voit retirer les classes rouge, vert et bleu
+	    				$(this).removeClass("rouge vert bleu");
+	    			});
+
+	    	// Correction exo3 bouton
+	    	$("#btn").on("click",(function(){
+	    		//Quand le bouton est cliqué
+	    		var $tab = $(".bloc2");
+	    		//Tout les éléments ayant la classe bloc2 sont récupérés et stockés dans $tab
+	    		for(let i = 0; i < $tab.length; i++){
+	    			//Itération sur chacun des éléments de $tab
+		    		if ($.isNumeric($tab.eq(i).text())) {
+		    			//test si le contenu de l'élément à l'index i est numerique
+		    			if ($tab.eq(i).text() % 2 == 0) {
+		    				//test si pair : ajoute le contenu de l'élément au paragraphe result en précisant pair
+		    				$("#result").html($("#result").html()+$tab.eq(i).text()+" = "+"Pair "+" <br> ");
+		    			}
+		    			else{
+		    				//si non pair: ajoute le contenu de l'élément au paragraphe result en précisant impair
+		    				$("#result").html( $("#result").html() +  $tab.eq(i).text() + " = " + "Impair " +  " <br> ");
+		    			}
+		    		}	
+		    		else{
+		    			//si non numérique : ajoute le contenu de l'élément au paragraphe result en précisant chaine de caracteres
+		    			$("#result").html($("#result").html()+  $tab.eq(i).text() + " = " + "chaine de caracteres " + " <br> ");
+		    		}	
+	    		}
+	    		$("#btn").off();
+	    	}));		
+
+
+	    	//Correction alternative exo 3 part 2
+	    	$("#btn").on("click",(function(){
+	    		$(".bloc2").each(function(){
+	    			if ($.isNumeric($(this).text())) {
+		    			//test si le contenu de l'élément à l'index i est numerique
+		    			if ($(this).text() % 2 == 0) {
+		    				//test si pair : ajoute le contenu de l'élément au paragraphe result en précisant pair
+		    				$("#result").html($("#result").html()+$(this).text()+" = "+"Pair "+" <br> ");
+		    			}
+		    			else{
+		    				//si non pair: ajoute le contenu de l'élément au paragraphe result en précisant impair
+		    				$("#result").html( $("#result").html() +  $(this).text() + " = " + "Impair " +  " <br> ");
+		    			}
+		    		}	
+		    		else{
+		    			//si non numérique : ajoute le contenu de l'élément au paragraphe result en précisant chaine de caracteres
+		    			$("#result").html($("#result").html()+  $(this).text() + " = " + "chaine de caracteres " + " <br> ");
+		    		}	
+	    		})
+	    	}));
+    	
+	    	});
+		
+    </script> <!-- JS -->
+</body>
+</html>
+

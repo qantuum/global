@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>MarvinW - Nombres premiers<!--cours JS de Rémi le 03.04.18--></title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<!--Exercices de js faits avec le cours "js3" le 03.04.18-->
+	<body>
+
+		<script>
+
+					var infinite = "top";
+
+
+
+					function premier(nombre) {
+						var diviseur_ = 1;
+						var reste_ = nombre + 1;
+						var diviseurs = [];
+
+						while (diviseur_ <= reste_) {
+							if (nombre % diviseur_ === 0) {
+								diviseurs.push(diviseur_);
+							}
+							else {}	
+							diviseur_ ++;					
+							}
+						
+							if (diviseurs.length == 2) {
+								return("Il n'y a que " + diviseurs.length + " diviseurs : " + diviseurs + "\n" + "Votre nombre " + nombre + " est premier");
+								}
+							else {
+								return("Il y a " + diviseurs.length + " diviseurs : " + diviseurs + "\n" + "Votre nombre " + nombre + " n'est pas premier");
+							}
+						}
+
+
+			while (infinite = "top") {
+
+				var nbr = parseInt(prompt("Entrez un nombre positif"));
+
+				if (nbr != NaN && nbr > 0) {
+				alert(premier(nbr));
+				} else {
+					alert("Votre saisie n'est pas le nombre attendu");
+				}
+			}
+
+
+		</script>
+
+	</body>
+
+</html>

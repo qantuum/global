@@ -1,0 +1,232 @@
+<!DOCTYPE html> <!--indique au navigateur que l'on est en html-->
+<html lang="fr"><!--commence le corps html et définit la langue-->
+
+	<head><!--informations inportantes non visibles par l'utilisateur mais interprétables par le navigateur et les autres langages-->
+		<title>Calendrier mois d'Avril</title><!--titre du site; affiché sur l'onglet ou la fenêtre-->
+		<meta charset="UTF-8"><!--meta c'est la métadonnées, charset c'est l'encodage des caractères-->
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"><!--Ajout de police Ubuntu-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+		<style>
+			body {
+				font-family: "Ubuntu", Arial, sans-serif;
+				background-color: black;
+				width: 80%;
+				margin-left: auto;
+			}
+
+			input {
+				background-color: purple;
+				color: lightblue;
+				border-color: lightblue;
+			}
+
+			h1, h2, h3 {
+				color: white;
+			}
+
+			ul {
+				display : flex;
+				list-style: none;
+				flex-wrap: wrap;
+				width : 700px;
+				background-color: hsl(190, 90%, 30%);
+				padding: 0;
+				color: white;
+			}
+
+			li {
+				width: 14%;
+				text-align: center;
+				border: 1px dotted white;
+			}
+
+			#monthbox {
+				background-color: green;
+				display: table;
+				padding: 20px;
+				border-radius: 20px;
+			}
+
+			#monthbox input {
+				margin: 4px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h1 id = "title">Calendrier simple (ça rime avec cendrier)</h1>
+		<h2>Fait en 2018</h2>
+		<h2>Devrait fonctionner aussi les autres années</h2>
+		<h3>N'affichera pas le 29 Février mais devrait afficher le 1er Mars sans décalage</h3>
+		<div id = "calendrier">
+		</div>
+
+		<script>
+
+			/*
+
+			CODE OPTIMISE POUR L'ANNEE EN COURS (ici : 2018);
+
+			Explications des variables :
+
+			var boitePos : situer mon élément tableau (la "boite" créée grâce au ul);
+			var buttonMonth : séléctionne toutes les occurences des éléments portant la classe "bouton";
+			var currentMonth : est vide à l'initialisation du prog; prend soit la valeur du mois courant, soit la valeur du premier jour du mois demandé;
+			var d : Date courante (!);
+			var decal : prend la numéro de ce premier jour (0 = dimanche, 1 = lundi,...);
+			var dMonthFirst : est vide à l'initialisation du programme; prend la valeur du premier jour du mois demandé au clic;
+			var dWeek : prend la valeur du premier jour du mois "currentMonth";			
+			var day : créer un élément de HTML (li);
+			var daytext : créer un textNode (contenu du li -> nom des jours);
+			var days : liste des jours;
+			var monthbox : créer un élément de HTML (div);
+			var month : Toutes les input. Comme les seuls input que je créée sont les noms de mois, c'est bon;
+			var monthes : liste des mois;
+			var monthesdex : liste des "durées" de chaque mois";	
+			var monthpos : situer mon élément de HTML de "boîte à mois";
+			var nbrDays : Associe le nombre de jours à afficher en fonction du mois en cours;	
+			var num : créer éléments de HTML (li) qui sont différents de ceux du "day";
+			var numtext : créer un textNode (contenu du li -> numéro du jour);		
+			var posCal : situer mon élément de HTML calendrier;
+			var ulboite : créer un élément de HTML (ul);
+			*/
+
+			
+			//initialisation des arrays;
+			var days = ["dim", "lun", "mar", "mer", "jeu", "ven", "sam"];
+			var monthes = ["jan", "fev", "mar", "avr", "mai", "jun", "jul", "aot", "sep", "oct", "nov", "dec"];
+			var monthesdex = [30, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+			//initialisation des variables globales;
+			var d = new Date();
+			var nbrDays = monthesdex[d.getMonth()];
+			var boitePos = "";
+			var dMonthFirst = "";
+			var currentMonth = "";
+
+			//Message de bienvenue;
+			alert("Bienvenue dans ce calendrier !\n" + "Nous sommes en " + d.getFullYear());
+
+
+			//affichage de la boîte contenant tous les mois de 2018;
+			var monthbox = document.createElement("div");
+			monthbox.setAttribute("id", "monthbox");
+			var posCal = document.getElementById("calendrier");
+			posCal.appendChild(monthbox);
+			//fin affichage de la "boîte à mois" - purement esthétique;
+
+			//affichage des différents mois sous forme de boutons;
+			for (i = 0; i < monthes.length; i++) {
+				var month = document.createElement("input");
+				month.setAttribute("id", i);
+				month.setAttribute("type", "button");
+				month.setAttribute("class", "buttonMonth");
+				month.setAttribute("value", monthes[i])
+				var monthpos = document.getElementById("monthbox");
+				monthpos.appendChild(month);
+			}
+			//grâce à  la boucle for je génère chaque mois;
+			
+
+
+			//création de la boîte à calendrier et des différents jours qu'il y a dedans;
+			function dayLoad() {
+
+				//création de la "boîte à calendrier" - elle reprend quelques éléments CSS;
+				//le flex est important pour l'affichage de chaque tableau correctement;
+				var ulboite = document.createElement("ul");
+				ulboite.setAttribute("id", "boite");
+				posCal.appendChild(ulboite);
+				//fin création boîte;
+
+				//affchage de la tête de tableau, les noms des jours;
+				for (i = 0; i < days.length; i++) {
+
+					var day = document.createElement("li");
+					var daytext = document.createTextNode(days[i]);
+					boitePos = document.getElementById("boite");
+					day.appendChild(daytext);
+					boitePos.appendChild(day);
+				}
+				//gâce au for je charge donc toutes les cases correspondant aux jours (Lundi, ...);
+
+				//afichage des numéros des jours;
+				for (i = 1; i <= nbrDays; i++) {
+					var num = document.createElement("li");
+					num.setAttribute("class", "nums");
+					var numtext = document.createTextNode(i);
+					num.appendChild(numtext);
+					boitePos.appendChild(num);
+				}
+			}
+			//fin chargement des jours;
+
+			//calcul de combien de jours je dois décaler pour que le 1er du mois soit bien le bon jour;
+			function daySlide() {
+				if (dMonthFirst == "") {
+					currentMonth = d.getMonth();
+				}
+				else {
+					currentMonth = dMonthFirst.getMonth();
+				}
+
+				var dWeek = new Date(d.getFullYear(), currentMonth, 1);
+				var decal = dWeek.getDay();
+				for (i = 0; i < decal; i++) {
+					var vide = document.createElement("li");
+					var videtext = document.createTextNode("\t");
+					var videpos = document.getElementById("boite");
+					vide.appendChild(videtext);
+					var numPosRef = document.querySelector(".nums");
+					videpos.insertBefore(vide, numPosRef);
+				}
+			}
+			//fin fonction bon jour;
+
+			dayLoad();
+			daySlide();
+
+			//clics sur le mois;
+			var buttonMonth = document.querySelectorAll(".buttonMonth");
+			for (var i = 0; i < buttonMonth.length; i++) {
+				buttonMonth[i].addEventListener("click", monthDisplay);
+			}
+
+			//affichage du mois demandé lors du clic bouton;
+			function monthDisplay() {
+				dMonthFirst = new Date(d.getYear(), this.id, 1);
+				decal = dMonthFirst.getDay();
+				nbrDays = monthesdex[dMonthFirst.getMonth()];
+				dayUpdate();
+			}
+			//fin affichage mois
+
+			//mise à jour des numéros au clic du mois;
+			function dayUpdate() {
+				if (boitePos != null) {
+					posCal.removeChild(boitePos);
+					dayLoad();
+					daySlide();
+				}
+				else {
+					dayLoad();
+					daySlide();
+				}
+
+			}
+			//fin fonction numéros;
+
+
+
+		</script>
+
+
+
+
+
+	</body>
+
+</html>

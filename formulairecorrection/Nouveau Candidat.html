@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Rémi LANNEY">
+    <!-- base href="http://lisae.remi-lanney.com/public/" -->
+
+    <title>	Nouveau Candidat
+</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="Nouveau%20Candidat_fichiers/bootstrap.css" rel="stylesheet">
+    
+        <!-- jqueryUi CSS -->
+    <link href="Nouveau%20Candidat_fichiers/jquery-ui.css" rel="stylesheet">
+<!--     <link href="../vendor/jqueryUi/jquery-ui.structure.min.css" rel="stylesheet"> -->
+<!--     <link href="../vendor/jqueryUi/jquery-ui.theme.min.css" rel="stylesheet"> -->
+
+    <!-- MetisMenu CSS -->
+    <link href="Nouveau%20Candidat_fichiers/metisMenu.css" rel="stylesheet">
+    
+    <!-- DataTables CSS -->
+    <link href="Nouveau%20Candidat_fichiers/jquery.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="Nouveau%20Candidat_fichiers/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="Nouveau%20Candidat_fichiers/morris.css" rel="stylesheet">
+    
+
+
+    <!-- Custom Fonts -->
+    <link href="Nouveau%20Candidat_fichiers/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>.cke{visibility:hidden;}</style></head>
+
+<body cz-shortcut-listen="true">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://lisae.remi-lanney.com/">LISAE</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-group fa-fw"></i> Les promos <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                    	                    		 
+	                    <li>
+	                       <a href="http://lisae.remi-lanney.com/promo/1/edit">
+                                <div>
+                                    <i class="fa fa-edit fa-fw"></i> Simplon Nice
+                                </div>
+                            </a>
+                        </li>
+                        	                                            		 
+	                    <li>
+	                       <a href="http://lisae.remi-lanney.com/promo/9/edit">
+                                <div>
+                                    <i class="fa fa-edit fa-fw"></i> Simplon Cannes Frayère
+                                </div>
+                            </a>
+                        </li>
+                        	                                            		 
+	                    <li>
+	                       <a href="http://lisae.remi-lanney.com/promo/10/edit">
+                                <div>
+                                    <i class="fa fa-edit fa-fw"></i> Le Hublot - Simplon Nice
+                                </div>
+                            </a>
+                        </li>
+                        	                                                <li class="divider"></li>
+                        <li>
+                            <a href="http://lisae.remi-lanney.com/promo/create">
+                                <div>
+                                    <i class="fa fa-edit fa-fw"></i> Créer une promo
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-group fa-fw"></i> L'équipe <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="http://lisae.remi-lanney.com/user">
+                                <div>
+                                    <i class="fa fa-plus fa-fw"></i> Gérer les membres
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="http://lisae.remi-lanney.com/user/create">
+                                <div>
+                                    <i class="fa fa-plus fa-fw"></i> Créer un membre
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
+                        <i class="fa fa-user fa-fw"></i> Rémi LANNEY <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="http://lisae.remi-lanney.com/user/1/edit"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="http://lisae.remi-lanney.com/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <form id="logout-form" action="http://lisae.remi-lanney.com/logout" method="POST" style="display: none;">
+                    	<input name="_token" value="31LAv9kueYPxpBgvDtTF9AnjvK1kAPSmt4snU5LM" type="hidden">
+                    </form>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav in" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                    <input class="form-control" placeholder="Search..." id="search_appear" type="text">
+                                    <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" id="buttonsearch">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    </span>
+                            </div>
+                            <form name="motorsearch" id="motorsearch" method="post" action="http://lisae.remi-lanney.com/search">
+                                <input name="_token" value="31LAv9kueYPxpBgvDtTF9AnjvK1kAPSmt4snU5LM" type="hidden">
+                                <input name="_method" value="POST" type="hidden">
+                                <input name="search" id="search" type="hidden">
+                            </form>
+                            <!-- /input-group -->
+                        </li>
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-dashboard fa-fw"></i>  Simplon Cannes Frayère <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                            			                    		 
+			                    <li>
+			                       <a href="http://lisae.remi-lanney.com/promo/1"> <i class="fa fa-users fa-fw"></i> Simplon Nice</a>
+		                        </li>
+		                        			                        		                    		 
+			                    <li>
+			                       <a href="http://lisae.remi-lanney.com/promo/9"> <i class="fa fa-users fa-fw"></i> Simplon Cannes Frayère</a>
+		                        </li>
+		                        			                        		                    		 
+			                    <li>
+			                       <a href="http://lisae.remi-lanney.com/promo/10"> <i class="fa fa-users fa-fw"></i> Le Hublot - Simplon Nice</a>
+		                        </li>
+		                        			                                                    </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        		             	<li>
+		             		<a href="#"><i class="fa fa-list fa-fw"></i> Liste principale<span class="fa arrow"></span></a>
+                     		<ul class="nav nav-second-level collapse">
+                     			<li>
+		                             <a href="http://lisae.remi-lanney.com/candidat/liste?principale"><i class="glyphicon glyphicon-ok"></i> Liste principale</a>
+		                         </li>
+		                         <li>
+		                             <a href="http://lisae.remi-lanney.com/candidat/liste?attente"><i class="glyphicon glyphicon-time"></i> Liste d'attente</a>
+		                         </li>
+		                         <li>
+		                             <a href="http://lisae.remi-lanney.com/candidat/liste?negative"><i class="glyphicon glyphicon-remove"></i> Liste refusé(s)</a>
+		                         </li>
+                     		</ul>
+                    		<!-- /.nav-second-level -->
+                 		</li> 
+		             	<li>
+                            		             		<a href="#"><i class="fa fa-users fa-fw"></i> Candidats (26)<span class="fa arrow"></span></a>
+                     		<ul class="nav nav-second-level collapse in">
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/329"><i class="glyphicon glyphicon-user"></i> BAILET Jean-louis</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/323"><i class="glyphicon glyphicon-user"></i> BARLAND Franck</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/277"><i class="glyphicon glyphicon-user"></i> BARON Valerie</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/324"><i class="glyphicon glyphicon-user"></i> BENABDERRAHMANE Hadj ali</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/285"><i class="glyphicon glyphicon-user"></i> BERTRAND Swan</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/249"><i class="glyphicon glyphicon-user"></i> BRAYé Michel</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/331"><i class="glyphicon glyphicon-user"></i> CINELLI Jeremy</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/333"><i class="glyphicon glyphicon-user"></i> DE FRANCQUEVILLE Célia</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/304"><i class="glyphicon glyphicon-user"></i> DEREUSE Gary</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/335"><i class="glyphicon glyphicon-user"></i> DUFOUR Fanny</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/299"><i class="glyphicon glyphicon-user"></i> DUPUTEL Michael</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/232"><i class="glyphicon glyphicon-user"></i> KHELIL Thibaut</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/337"><i class="glyphicon glyphicon-user"></i> LENARD Maélie</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/321"><i class="glyphicon glyphicon-user"></i> LORENZELLI Lucas</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/279"><i class="glyphicon glyphicon-user"></i> MONEY Mathieu</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/255"><i class="glyphicon glyphicon-user"></i> MURA Floriane</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/296"><i class="glyphicon glyphicon-user"></i> NEJEZCHLEBOVA Lucie</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/293"><i class="glyphicon glyphicon-user"></i> PARSY Benoit</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/267"><i class="glyphicon glyphicon-user"></i> PIETRI Nicolas</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/258"><i class="glyphicon glyphicon-user"></i> POTICADOU Marvin</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/222"><i class="glyphicon glyphicon-user"></i> RASAMIZAFY Tendry</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/338"><i class="glyphicon glyphicon-user"></i> RAYNAUD Julien</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/233"><i class="glyphicon glyphicon-user"></i> SCIBSKA Anna</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/326"><i class="glyphicon glyphicon-user"></i> TABRY Anne</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/297"><i class="glyphicon glyphicon-user"></i> VERMEULEN Jan</a>
+                     			</li>
+                     			                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/candidat/316"><i class="glyphicon glyphicon-user"></i> WORTMAN Marvin</a>
+                     			</li>
+                     			                         		 <li class="divider">&nbsp;</li>
+		                         <li>
+		                             <a href="http://lisae.remi-lanney.com/candidat/import"><i class="glyphicon glyphicon-import"></i> Importer des candidats</a>
+		                         </li>
+                                                                  <li class="divider">&nbsp;</li>
+                                 <li>
+                                     <a href="http://lisae.remi-lanney.com/candidat/create" class="active"><i class="glyphicon glyphicon-plus"></i> Créer un candidat</a>
+                                 </li>
+                                 <li>
+                                     <a href="http://lisae.remi-lanney.com/candidat/ClearPromo/9" onclick="if(!confirm('Êtes vous bien sûr ?')) return false;"><i class="glyphicon glyphicon-import"></i> Vider la promo</a>
+                                 </li>
+                                                      		</ul>
+                    		<!-- /.nav-second-level -->
+                 		</li> 
+		                <li>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Détails promo<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                     			<li>
+                     				<a><i class="glyphicon glyphicon-stats"></i> Simplon Cannes Frayère</a>
+                     			</li>
+                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/absences"><i class="glyphicon glyphicon-eye-close"></i> Enregistrer absences</a>
+                     			</li>
+                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/retards"><i class="glyphicon glyphicon-time"></i> Enregistrer retards</a>
+                     			</li>
+                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/promo/trombi"><i class="fa fa-group"></i> Trombinoscopes</a>
+                     			</li>
+                                <li>
+                                    <a href="http://lisae.remi-lanney.com/promo/selec"><i class="fa fa-bar-chart"></i> Selection</a>
+                                </li>
+                         		<li class="divider"></li>
+		                        <li>
+		                            <a href="#"><i class="glyphicon glyphicon-stats"></i> Statistiques <span class="fa arrow"></span></a>
+		                            <ul class="nav nav-third-level collapse">
+		                     			<li>
+		                     				<a href="http://lisae.remi-lanney.com/absences/stats"><i class="glyphicon glyphicon-eye-close"></i> Absences</a>
+		                     			</li>
+		                     			<li>
+		                     				<a href="http://lisae.remi-lanney.com/retards/stats"><i class="glyphicon glyphicon-time"></i> Retards</a>
+		                     			</li>
+                                        <li>
+                                            <a href="http://lisae.remi-lanney.com/docAdmin"><i class="fa fa-file-o"></i> Documents administratifs</a>
+                                        </li>
+		                     			<li>
+		                     				<a href="http://lisae.remi-lanney.com/stats"><i class="fa fa-dashboard"></i> Divers</a>
+		                     			</li>
+		                     		</ul>
+		                     		<!-- /.nav-third-level -->
+		                        </li>
+                     		</ul>
+                     		<!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-cog fa-fw"></i> Outils<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="http://lisae.remi-lanney.com/emargement" target="_blank"><i class="fa fa-calendar"></i> Feuille emargement</a>
+                                </li>
+                                <li>
+                                    <a href="http://lisae.remi-lanney.com/groupesAleatoires/4"><i class="fa fa-object-group"></i> Groupe aléatoire</a>
+                                </li>
+                                <li>
+                                    <a href="http://lisae.remi-lanney.com/exports"><i class="fa fa-download"></i> Exports</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-briefcase fa-fw"></i> Insertion professionnelle<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="http://lisae.remi-lanney.com/planning"><i class="fa fa-address-card"></i> Planning</a>
+                                </li>
+                     			<li>
+                     				<a href="http://lisae.remi-lanney.com/structure"><i class="fa fa-address-card"></i> Entreprises</a>
+                     			</li>
+                                <li>
+                                    <a href="http://lisae.remi-lanney.com/contacts"><i class="fa fa-address-card"></i> Contacts</a>
+                                </li>
+                     		</ul>
+                     		<!-- /.nav-second-level -->
+                        </li>
+		             	 
+                        
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper" style="min-height: 697px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">	Nouveau Candidat
+</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            
+            
+            <!-- /.row -->
+                <div class="col-md-8">
+		<div class="panel panel-default">	
+			<div class="panel-heading">Profil</div>
+			<div class="panel-body">
+				<form name="addCandidat" method="post" action="#" class="form-horizontal panel" id="addCandidat">
+					<input name="_token" value="31LAv9kueYPxpBgvDtTF9AnjvK1kAPSmt4snU5LM" type="hidden">
+					<input name="_method" value="PUT" type="hidden">
+					<div class="row">
+						<div class="col-md-4 strong">Nom :</div>
+						<div class="col-md-8 "><input name="Prenom" placeholder="Prénom" type="text"> <input name="Nom" placeholder="Nom" type="text"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">Sexe :</div>
+						<div class="col-md-8 ">
+							<select name="Sexe" id="sexe">
+								<option selected="selected">-- Sexe --</option>
+								<option value="Homme">Homme</option>
+								<option value="Femme">Femme</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">Date de naissance :</div>
+						<div class="col-md-8 "><input name="Date_de_naissance" type="text"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">Nationnalité :</div>
+						<div class="col-md-8 "><input name="Nationalite" type="text"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">Adresse :</div>
+						<div class="col-md-8 "><input name="Adresse" type="text"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">CP :</div>
+						<div class="col-md-8 "><input name="CP" type="text"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">Ville :</div>
+						<div class="col-md-8 "><input name="Ville" type="text"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">QPV :</div>
+						<div class="col-md-8 ">
+						 	<input name="QPV" value="oui" id="qpvo" type="radio"><label for="qpvo">Oui</label> /
+						 	<input name="QPV" value="non" id="qpvn" type="radio"><label for="qpvn">Non</label> 
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">Email :</div>
+						<div class="col-md-8 "><input name="Email" type="email"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">Téléphone :</div>
+						<div class="col-md-8 "><input pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" name="Telephone" type="tel"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">Statut :</div>
+						<div class="col-md-8 "><input name="Statut" type="text"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 strong">N° pôle emploi :</div>
+						<div class="col-md-8 "><input name="Num_pole_emploi" type="text"></div>
+					</div>
+					<div class="row ">
+						<div class="col-md-4 strong">N° secu :</div>
+						<div class="col-md-8 "><input name="Num_secu" type="text"> <input value="Mettre à jour" class="btn btn-default pull-right" type="button" name="MAJ"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		
+	</div>
+	<div class="col-md-4">
+		<div class="panel panel-default">	
+			<div class="panel-heading">Photo</div>
+			<div class="panel-body">		
+				<img alt="Nouveau Candidat" src="Nouveau%20Candidat_fichiers/no_visage.png" class="noportrait">
+						
+				<form name="uploadPortrait" method="post" action="#" class="form-horizontal panel" enctype="multipart/form-data">
+					<input name="_token" value="31LAv9kueYPxpBgvDtTF9AnjvK1kAPSmt4snU5LM" type="hidden">
+					<input name="_method" value="POST" type="hidden">
+					<div class="form-group ">
+						<input name="portrait" required="" placeholder="Portrait du candidat" type="file">
+						
+					</div>
+					<input value="Envoyer" class="btn btn-default pull-right" type="submit">
+				</form>
+			</div>
+		</div>
+		
+		
+	</div>
+	<div class="col-md-12">
+		<a href="http://lisae.remi-lanney.com/candidat/create" class="btn btn-default">
+			<span class="glyphicon glyphicon-circle-arrow-left"></span> Retour
+		</a>
+	</div>
+            <div class="clearboth"><br></div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="Nouveau%20Candidat_fichiers/jquery_003.js"></script>
+    <script src="Nouveau%20Candidat_fichiers/jquery-ui.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="Nouveau%20Candidat_fichiers/bootstrap.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="Nouveau%20Candidat_fichiers/metisMenu.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="Nouveau%20Candidat_fichiers/raphael.js"></script>
+    <script src="Nouveau%20Candidat_fichiers/morris.js"></script>
+    
+    <!-- Flot Charts JavaScript -->
+	<!--[if lte IE 8]><script src="../vendor/flot/excanvas.min.js"></script><![endif]-->
+    <script src="Nouveau%20Candidat_fichiers/jquery_002.js"></script>
+    <script src="Nouveau%20Candidat_fichiers/jquery.js"></script>
+    <script src="Nouveau%20Candidat_fichiers/jquery_005.js"></script>
+    <script src="Nouveau%20Candidat_fichiers/jquery_006.js"></script>
+    
+    <!-- DataTables JavaScript -->
+    <script src="Nouveau%20Candidat_fichiers/jquery_004.js"></script>
+    <!-- <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script> -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="Nouveau%20Candidat_fichiers/sb-admin-2.js"></script>
+    
+    <!--  CKeditor -->
+    <script src="Nouveau%20Candidat_fichiers/ckeditor.js"></script>
+
+    
+    
+    <script type="text/javascript" src="Nouveau%20Candidat_fichiers/verifForm.js"></script>
+    
+
+
+
+
+<script id="wappalyzer" src="Nouveau%20Candidat_fichiers/inject.js"></script></body></html>

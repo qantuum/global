@@ -1,0 +1,325 @@
+/*initialisation des tags HTML*/
+body {
+	margin : 0;
+	font-size: 15px;
+	width: 96%;
+	margin-left: 2%;
+	text-align: justify;
+	background-color: lightblue;
+	background-image : url('../img/wallp.png');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+/* {
+	border : 1px inset blue;
+}*/
+
+ul {
+	padding: 0;
+	list-style : none;
+}
+
+p, h1, h2, h3, h4, h5, li {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+h2 {
+	font-family: "Alegreya Sans", Arial, sans-serif;
+}
+
+h3 {
+	font-family: "Alegreya Sans", Arial, sans-serif;
+}
+
+p {
+	text-indent: 5%;
+	font-family: "Alegreya Sans", Arial, sans-serif;
+}
+
+nav {
+	height: 6em;
+	position : fixed;
+	width : 100%;
+	top : 0;
+	left : 0;
+	background-color: #06313F;
+}
+
+nav fieldset {
+	display : flex;
+	flex-flow : row wrap;
+	justify-content : center;
+	color : #FAC314;
+	border : none;
+}
+
+nav input {
+	color : inherit;
+	border : 0.1em inset #FAC314;
+	border-radius : 1em;
+	padding : 0.2em;
+	margin : 0.3em;
+	margin-top : 1em;
+	background-color : #08546F;
+	cursor : pointer;
+}
+
+nav input:hover {
+	box-shadow : 2px 5px 2px #FAC314;
+}
+
+header, footer {
+	background-color : #08546F;
+	color : #FAC314;
+	background-image : url('../img/trianglify.png');
+	background-size: cover;
+
+}
+
+header {
+	margin-top : 6em;	
+	font-family : "Changa", "Times New Roman", serif;
+
+}
+
+header h1 {
+	font-size : 2.2em;
+	font-weight: bold;
+	text-align : center;
+	text-shadow: 6px 5px 2px #06313F;
+}
+
+header h2 {
+	font-size : 1.6em;
+	text-align : center;
+}
+
+header h3 {
+	font-size : 1.3em;
+	text-align: center
+}
+
+footer {
+	background-color : #08546F;
+	margin : 0;
+}
+
+footer a {
+	width : 3em;
+	padding : 0.6em;
+}
+
+footer ul {
+	margin : 0;
+	padding-top : 1.2em;
+}
+
+footer p {
+	color : #FAC314;
+	text-align: center;
+	text-indent : 0;
+	font-size : 1.2em;
+	margin : 0;
+}
+
+footer input {
+	font-size : 3em;
+	background-color : transparent;
+	border : none;
+	cursor: pointer;
+	color : #FAC314;
+	padding : 0.5em;
+	margin : 0;
+	padding-bottom : 1em;
+}
+
+a {
+	color : inherit;
+	text-decoration : none;
+}
+
+a:hover {
+	filter : brightness(150%);
+	text-decoration : underline;
+}
+
+/*initialisation des éléments répétitifs (classes)*/
+.flexRow {
+	display : flex;
+	flex-flow : row wrap;
+	justify-content: center;
+}
+
+.tabDisplay {
+	flex : 0 0 auto;
+	width : 20%;
+	min-width : 15%;
+	display : flex;
+	flex-direction : column;
+	align-items: center;
+	align-content : flex-start;
+	justify-content : center;
+	margin: 0.8em;
+	padding : 0.8em;
+	background-color : #FAE6A6;
+	border-radius : 2em;
+	border : 0.2em solid #08546F;
+	box-shadow : 5px 5px 1px lightblue;
+}
+
+.tabDisplay:hover {
+	background-color : #FAC314;
+}
+
+.bigTab {
+	width : 90%;
+	align-items : flex-start;
+	list-style-type : disc;
+}
+
+.bigTab li {
+	line-height : 2em;
+	list-style-type : square;
+	margin-left : 2em;
+}
+
+
+#coordonnees {
+	display : flex;
+	flex-direction : column;
+}
+
+#coordInfo {
+	justify-content: space-around;
+}
+
+#coordGeneral {
+	justify-content : space-between;
+}
+
+#coordGeneral ul {
+	padding : 0.5em;
+	margin : 1.5em;
+}
+
+.lycee p {
+	padding-bottom : 55%;
+}
+
+.ratings {
+	display : flex;
+	flex-direction : row;
+}
+
+.ratings li {
+	padding : 8px !important;
+	margin : 1px;
+	border : none !important;
+	background-color: inherit !important;
+	box-shadow: none !important;
+}
+
+/*la gestion des images*/
+.full {
+	background-image : url('https://image.flaticon.com/icons/svg/149/149765.svg');
+}
+
+.empty {
+	background-image : url('https://image.flaticon.com/icons/svg/149/149222.svg');
+}
+
+#coordPhoto {
+	background-image : url('http://static8.viadeo-static.com/Obz1f7rV4_o8hui_MAZQPp4dfOY=/300x300/member/002fiay85voa4z6?ts=1438766603000');
+	width : 15em;
+	height: 15em;
+	background-size: contain;
+	margin : 5%;
+	border-radius : 100%;
+}
+
+.tabDisplay img {
+	width : 6em;
+	margin : auto;
+}
+
+.tabDisplay h4, .tabDisplay p, .tabDisplay input{
+	align-self: center;
+}
+
+.tabDisplay hr {
+	width : 80%;
+	box-shadow: none !important;
+}
+
+#compLang p {
+	font-style: italic;
+}
+
+.infoblocks {
+	border : 0.5em solid #FAC314;
+}
+
+/*juste les petites manipulations de texte*/
+.infoblocks h2 {
+	font-size : 2em;
+	text-align: center;
+	background-color : #FAC314;
+	margin : 0;
+}
+
+.infoblocks h3 {
+	margin : 0.05em;
+	font-size : 1.7em;
+	text-align: center;
+	background-color : lightblue;
+}
+
+.infoblocks h4 {
+	font-size : 1.3em;
+	text-align: center;
+}
+
+.infoblocks h5 {
+	font-size : 1.2em;
+	text-align : center;
+}
+
+/*pour les mecs qui lisent sur smartPhone psartek*/
+@media screen and (min-width: 1px) and (max-width: 736px) {
+	/*initialisation des sélecteurs communs*/
+	.rowFlex {
+		display : flex;
+		flex-flow : column wrap;
+		align-items: center;
+	}
+
+	#coordInfo, #coordGeneral {
+		justify-content: center;
+	}
+
+	body {
+		font-size : 13px;
+	}
+
+	nav {
+		background-color : transparent;
+	}
+
+	nav input {
+		font-size : 0.8em;
+	}
+
+	.tabDisplay {
+	display : flex;
+	flex-direction : column;
+	align-items: center;
+	justify-content : center;
+	margin: 0.8em;
+	padding : 0.8em;
+	max-width : 90%;
+	min-width : 70%;
+	}
+}

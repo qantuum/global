@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Quicksand" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+
+	<nav>
+    (100%)
+  </nav>
+  
+  <article>
+  	<section class="block" id="quiSommes">
+      <h2>Qui sommes-nous</h2>
+      							
+
+      <p>Nous sommes un réseau de fabriques numériques et inclusives en France et à l’étranger. Nous avons formé plus de 2000 apprenants aux métiers du numérique depuis 2013.</p>
+
+      <p>Nous sommes une entreprise sociale et solidaire. Nous voulons faire du numérique un véritable levier d’inclusion et révéler des talents parmi des publics peu représentés dans le secteur.</p>
+
+      <p>Nous conseillons les entreprises dans leur transformation digitale et parfois nous réalisons leurs sites et leurs applications.</p>
+    </section>
+
+    <section class="trombinoscope" id="modulTrombi"> <!-- Conteneur principal-->
+
+      <div class="cercle" id="trombiDiv"><!--Conteneur contenant les photos en petit-->
+
+        <h2>Trombinoscope</h2>
+
+        <img class="smallPhoto" id="franck" src="img/Barland_Franck_small.jpg" alt="franck">
+        <img class="smallPhoto" id="ali" src="img/Ben_Ali_small.jpg" alt="ali">
+        <img class="smallPhoto" id="michel" src="img/Bra_Michel_small.jpg" alt="michel" >
+        <img class="smallPhoto" id="marvin_w" src="img/Wort_Marvin_small.jpg" alt="marvin_w">
+        <img class="smallPhoto" id="celia" src="img/DeFr_Célia_small.jpg" alt="celia">
+        <img class="smallPhoto" id="gary" src="img/Der_Gary_small.jpg" alt="gary">
+        <img class="smallPhoto" id="fanny" src="img/Duf_Fanny_small.jpg" alt="fanny">
+        <img class="smallPhoto" id="michael" src="img/Dup_Michael_small.jpg" alt="michael">
+        <img class="smallPhoto" id="anne" src="img/Tab_Anne_small.jpg" alt="anne" >
+        <img class="smallPhoto" id="valerie" src="img/Baron_Valérie_small.jpg" alt="valerie">
+        <img class="smallPhoto" id="jean-louis" src="img/Jean-Louis_small.jpg" alt="jean-louis">
+        <img class="smallPhoto" id="thibaut" src="img/Khe_Thibaut_small.jpg" alt="thibaut">
+        <img class="smallPhoto" id="lucas" src="img/Lor_Lucas_small.jpg" alt="lucas">
+        <img class="smallPhoto" id="mathieu" src="img/Money_Mathieu_small.jpg" alt="mathieu"> 
+        <img class="smallPhoto" id="lucie" src="img/Nej_Lucie_small.jpg" alt="lucie">
+        <img class="smallPhoto" id="nicolas" src="img/Pie_Nicolas_small.jpg" alt="nicolas">
+        <img class="smallPhoto" id="marvin_p" src="img/Poti_Marvin_small.jpg" alt="marvin_p">
+        <img class="smallPhoto" id="floriane" src="img/Mura_Floriane_small.jpg" alt="floriane">
+        <img class="smallPhoto" id="tenders" src="img/Rasa_Tendry_small.jpg" alt="tenders">
+        <img class="smallPhoto" id="swan" src="img/Ber_Swan_small.jpg" alt="swan">
+        <img class="smallPhoto" id="benoit" src="img/Par_Benoit_small.jpg" alt="benoit">
+        <img class="smallPhoto" id="maelie" src="img/Len_Maélie_small.jpg" alt="maelie">
+        <img class="smallPhoto" id="julien" src="img/Rey_Julien_small.jpg" alt="julien">
+        <img class="smallPhoto" id="anna" src="img/Scib_Anna_small.jpg" alt="anna">
+        <img class="smallPhoto" id="jan" src="img/Verm_Jan_small.jpg" alt="jan">
+        <img class="smallPhoto" id="jeremy" src="img/Cin_Jérémy_small.jpg" alt="jeremy">
+        <img class="smallPhoto" id="remi" src="img/Lan_Remi_small.jpg" alt="remi">
+        <img class="smallPhoto" id="cyril" src="img/Enr_Cyril_very_small.png" alt="cyril">
+
+      </div>
+
+      <hr />
+      <div id="individuelle"><!--Conteneur contenant les informations sur les apprenants-->
+        <div class="descriptif">
+          <img id="laurent" src="img/And_Laurent_small.jpg" alt="une photo" >
+          
+        </div>
+        <div class="pedigree">
+          <h3 id="nomPrenom">Laurent Andrieux</h3>
+          <p id="textePerso">"Directeur de projet."</p>
+          <!--<button id="aleatoire">Aléatoirisation</button><!--bouton déclenchant l'affichage aléatoire des photos-->
+          <!--<button id="centrence">Centralisation</button><!--bouton déclenchant l'affichage de toutes photos au centre-->
+          <!--<button id="circle">Cerclisation</button><!--bouton exécutant la mise en cercle-->
+        </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="js/trombi.js"></script>
+
+ </article> 
+ <section id="ObjTimeLine">
+    <h2>Nos objectifs</h2> 
+    <div id="TimeLineContainer">
+
+
+      <header id="month">
+        <button class="button" type="button" name="button" id="prev">&lt;</button>
+            <h1 class="act_month" id="affichageMois"></h1>
+            <button class="button" type="button" name="button" id="next">&gt;</button>
+      </header>
+
+      <div id="name">
+        <h1>WEEKLY SCHEDULE</h1>
+      </div>
+
+      <div id="weeks">
+
+        <div class="act_week">
+          <h5>WEEK 1</h5>
+          <div class="point" id="pointHover1">
+            <span class="text" id="week1">
+              <header class="small">Timeline of the week 1</header>
+              <div class="textCache">
+                <p>Exemple exemple exempleexemple exempleexemple exemple exemple exemple</p>
+              </div>
+            </span>
+          </div>
+        </div>
+
+
+        <div class="act_week">
+          <h5>WEEK 2</h5>
+          <div class="point" id="pointHover2">
+            <span class="text" id="week2">
+              <header class="small">Timeline of the week 2</header>
+              <div class="textCache">
+                <p>Exemple exemple exempleexemple exempleexemple exemple exemple exemple</p>
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <div class="act_week">
+          <h5>WEEK 3</h5>
+          <div class="point" id="pointHover3">
+            <span class="text" id="week3">
+              <header class="small">Timeline of the week 3</header>
+              <div class="textCache">
+                <p>Exemple exemple exempleexemple exempleexemple exemple exemple exemple</p>
+              </div>
+            </span>
+          </div>
+        </div>
+
+
+        <div class="act_week">
+          <h5>WEEK 4</h5>
+          <div class="point" id="pointHover4">
+            <span class="text" id="week4">
+              <header class="small">Timeline of the week 4</header>
+              <div class="textCache">
+                <p>Exemple exemple exempleexemple exempleexemple exemple exemple exemple</p>
+              </div>
+            </span>
+          </div>
+        </div>
+
+
+        <div class="act_week">
+          <h5>WEEK 5</h5>
+          <div class="point" id="pointHover5">
+            <span class="text" id="week5">
+              <header class="small">Timeline of the week 5</header>
+              <div class="textCache">
+                <p>Exemple exemple exempleexemple exempleexemple exemple exemple exemple</p>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="js/timeline.js"></script>
+ </section>
+
+ <article>
+   <section id="objActu">
+    <h2>Notre actualité</h2>
+    <aside>
+      <div id="actu">
+          <!-- Partie du haut (boutons et Logos) -->
+          <!--<div id="ico">
+            <img id="fb" src="./img/facebook_blue.png"/>
+            <img id="twitter" src="./img/twitter_blue.png"/>
+            <img id="hide" src="./img/hide.png"/>
+          </div>-->
+            <!-- Partie TimeLine (Facebook, Twitter) -->
+        <div id="contenu">
+          <!-- TimeLine facebook récupérer via un iFrame obtenue sur facebook developer -->
+          <div id="facebookTimeLine"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimploncannesfrayere%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=201258330652607" width="330" height="500" style="overflow:hidden;border:none" scrolling="no" allow="encrypted-media"></iframe></div>
+          <!-- TimeLine twitter récupérer via un simple "href" pas d'iFrame pour twitter, mais doit avoir son script  -->
+          <div id="twitterTimeLine"><a class="twitter-timeline" data-width="330" data-height="500" href="https://twitter.com/SimplonCannes?ref_src=twsrc%5Etfw">Tweets by SimplonCannes</a></div>
+        </div>
+      </div>
+      <!-- Division permettant d'afficher le une fois le bouton 'hide' enclenché -->
+      <div id="display"></div>
+  </aside>
+    <!-- Script "async src" sert à la construction du HTML de la TimeLine de twitter, fourni par leur service de développeurs -->
+  <script async src="https://platform.twitter.com/widgets.js"></script>
+    <!-- Appel du script JavaScript pour le fonctionnement des boutons  -->
+  <script src="js/actu.js"></script>
+  </section>
+   <section id="objEvn">
+    <h2>Les évènements à venir</h2>
+  </section>
+ </article>
+ 
+ <section id="objPort">
+  <h2>Notre portfolio</h2>
+ </section>
+ <section id="objPart">
+  <h2>Nos partenaires</h2>
+  <img src="img/Partenaires.png" alt="Nos partenaires">
+ </section>
+ 
+ <article>
+   <section>
+     <h2>Contact professionnels</h2>
+   </section>
+   <section>
+    <h2>Contact</h2>
+  </section>
+ </article>
+ 
+ <footer>
+    <div class="reseaux">
+      <a href="https://www.facebook.com/Simplon.co/"  target="_blank"><img src="img/facebook.png"></a>
+      <a href="https://twitter.com/simplonco?lang=fr" target="_blank"><img src="img/twitter.png"></a>
+      <a href="https://fr.linkedin.com/company/simplon-co" target="_blank"><img src="img/linkedin.png"></a>
+      <a href="https://simplon.co"><img src="img/logolien.png"></a>
+    </div>
+    <div class="copyright">
+      <!-- <img src="copyright.png"> -->
+      <p>&#9400; Copyright 2018 - simplon.co</p>
+    </div>  
+ </footer>

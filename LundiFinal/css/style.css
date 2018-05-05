@@ -1,0 +1,514 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+ul {
+	list-style:none;
+}
+
+html {
+/*display: block;
+word-wrap: break-word; /* Retour à la ligne en bout de page *//*
+font-size: 100%;*/
+font-family: 'Quicksand', sans-serif;
+width: 96%;
+margin-left:2%;
+}
+
+nav {
+  width:100%;
+  display:flex;
+  flex-direction:row;
+}
+
+article {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+h1, header {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+h5, p{
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*####################*/
+/*####################*/
+/*## QUISOMMESNOUS ###*/
+/*####################*/
+/*####################*/
+
+#quiSommes {
+  width:30%;
+}
+
+
+/*####################*/
+/*####################*/
+/*###### TROMBI ######*/
+/*####################*/
+/*####################*/
+
+.trombinoscope { /* Conteneur contenant les div du trombinoscope: .cercle et .descriptif */
+display: flex;
+flex-direction:row;
+justify-content: center;
+position: relative;
+flex-wrap: nowrap;
+width: 70%;
+background-color: #f7f7f7;
+}
+
+.trombinoscope hr { /* Barre de séparation */
+width: 0.5px;
+height: 700px;
+}
+
+.cercle img {
+position: absolute;
+height: 80px;
+width: 80px;
+border-radius: 10%;
+}
+
+.cercle img:hover {
+position: absolute;
+height: 100px;
+width: 100px;
+border-radius: 10%;
+z-index: 50;
+}
+
+.cercle {
+width: 70%;
+height: 700px;
+}
+
+#individuelle{
+	width: 30%;
+	height: auto;
+	margin-right: 1%;
+}
+
+.descriptif {
+	padding: 1%;
+	text-align: center;
+	width: 100%;
+}
+
+.descriptif img {
+	height: 300px;
+	width: 300px;
+	border-radius: 5%;
+	margin-top: 4%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.pedigree{	
+	height: 80%;
+	width: 100%;
+	/*padding-left: 10%;
+	padding-right: 10%;*/
+	text-align: center;
+}
+
+#textePerso{
+	height: 50%;
+	width: 80%;
+	margin: 2% auto;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 5%;
+	border: 1px solid red;
+	border-radius: 5%;
+	background-color: #E80041;
+	font-weight: bold;
+	text-align:justify;
+	color: #fff;
+}
+
+/*####################*/
+/*####################*/
+/*TIMELINE(OBJECTIFS) */
+/*####################*/
+/*####################*/
+
+#ObjTimeline header {
+  letter-spacing: 8px;
+  padding: 5px;
+}
+
+/*Container de base (wrapper)*/
+#ObjTimeLine {
+  margin-bottom:100px !important;
+}
+
+#TimeLineContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border-bottom: 1px solid black;
+}
+
+.act_month {
+  letter-spacing: 10px;
+  font-size: 30px;
+  color: black;
+  align-items: center;
+
+
+}
+
+/*Bouton de selection de mois*/
+.button {
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: black;
+  margin: 0px;
+}
+
+.act_month:hover {
+  color: #E80041;
+  transition: 0.3s;
+
+}
+
+.button:hover {
+  color: #E80041;
+  transition: 0.3s;
+}
+
+/*Nom du mois*/
+#month {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  background: #f7f7f7;
+  border: 2px solid #777777;
+}
+
+/*Titre de la timeline ("Weekly Scheduele")*/
+#name {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  background: #E80041;
+  font-size: 10px;
+  align-items: center;
+  letter-spacing: 10px;
+  color: white;
+  border: 2px solid #777777;
+  border-top: none;
+}
+
+/*Div globale des semaines
+  Aère un peu la page*/
+#weeks {
+  display: flex;
+  padding-top: 100px;
+  height: 100px;
+  border: 2px solid #777777;
+  border-top: none;
+  border-bottom: none
+}
+/*Div des semaines (week 1, 2...)*/
+.act_week {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+
+}
+
+/*Alterne les couleurs des semaines*/
+#weeks div:nth-child(odd) {
+  background: #777777;
+}
+
+#weeks div:nth-child(even) {
+background: #f7f7f7;
+}
+
+
+/*div "boutons" en dessous de la semaine,
+  faisant apparaitre le block de texte
+  avec le hover dessus*/
+
+.point {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 85%;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #E80040;
+  border-radius: 50%;
+}
+
+/*Div definissant le block de texte
+  apparaissant avec le hover*/
+
+.text {
+  position: fixed;
+  flex-direction: column;
+  width: 80%;
+  border: 1px solid black;
+  margin-top: 15px;
+  left: 11%;
+  right: 11%;
+  word-wrap : break-word;
+  height: auto;
+}
+
+/*Titre du block de texte
+  apparaissant avec le hover*/
+.small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E80040;
+  height: 20%;
+  color: white;
+}
+
+/*Cache les div de week initialement
+  (n'apparaitront que lors du hover)*/
+#week1,#week2,#week3,#week4,#week5 {
+    display: none;
+}
+
+.textCache {
+  padding: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  background: white;
+}
+
+/**********************RESPONSIVE A PARTIR DE 600PX POUR MOBILES****************************/
+
+@media screen and (max-width: 500px) {
+  /*Container general*/
+  #TimeLineContainer {
+    border-bottom: none;
+  }
+
+.act_month {
+  font-size: 15px;
+}
+
+.button {
+  font-size: 20px;
+}
+
+
+  /*Titre de la timeline ("Weekly Scheduele")*/
+  #name {
+    height: 80px;
+    text-align: center;
+  }
+  /*Div des semaines (week 1, 2)
+    Disposition en colonnes
+  */
+  #weeks {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 30%;
+    padding: 0px;
+    padding-left: 0px;
+    border-right: 1px solid black;
+  }
+
+/*div "boutons" a coté des semaines,
+  Hover les "boutons" fera apparaitre le texte
+  Hover le block de texte le fera rester a l'écran
+*/
+  .point {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #E80040;
+    z-index: 2;
+    left: 91%;
+    top: 40%;
+  }
+
+  /*CLASSE TEXT DEFINIT L'EMPLACEMENT DES BOITES DE TEXTE
+    Elles sont fixées a un emplacement pour une lecture plus facile*/
+  .text {
+    background-color: white;
+    position:fixed;
+    top: 145px;
+    left: 36%;
+    width:52%;
+  }
+  /*Titre de la boite apparaissant par hover*/
+  .small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E80040;
+    height: 20%;
+    color: white;
+  }
+
+  #ObjTimeLine header {
+    text-align: center;
+  }
+
+  /*span englobant la boite de texte apparaissant avec le hover*/
+   #ObjTimeLine span .text {
+   margin-left: 200px;
+  }
+  /*Definition des tailles de polices*/
+  /*taille de police pour paragraphes*/
+ .textCache {
+   background: white;
+ }
+
+ /*####################*/
+/*####################*/
+/*####### ACTUS ######*/
+/*####################*/
+/*####################*/
+
+#objActu {
+  width:50%;
+  flex:0 0 auto;
+}
+
+/* Actu englobe tout */
+#actu{
+  min-height: 550px;
+  width: 340px;
+  background-color: #3c5a99;
+  border-radius: 5px;
+  transition: 1000ms;
+}
+/* Div ico sert a regrouper les icones Facebook, Twitter et masquer*/
+#ico{
+  display: flex;
+  width: 340px;
+  margin-left: auto;
+}
+
+/* Contenu de la div Ico qui regroupe tous les icones */
+#fb, #twitter, #hide{
+  border: 1px;
+  margin: 5px;
+  height: 2em;
+  width: 2em;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+/* Empêche l'élément display d'être affiché lors de l'exécution de la page */
+#display{
+  display: none;
+  position: fixed;
+  width: 30px;
+  height: 250px;
+  margin-left: -5px;
+  top: 35%;
+  border-radius: 5px;
+  transform: translate(-50%);
+}
+
+/* Permet de configurer le label écrit en InnerHTML avec JS */
+#display label{
+  font-family: impact;
+  color: white;
+  writing-mode: vertical-lr;
+  font-size: 15px;
+  margin-left: 7px;
+  margin-top: 20px;
+  user-select : none;
+}
+
+/* Aggrandi le bouton display au hover */
+#display:hover{
+  margin-left: 10px;
+  transition: 600ms;
+}
+
+/* Conteneur des TimeLine de Facebook et Twitter */
+#contenu{
+  margin-left: 5px;
+  min-height: 200px;
+  max-height: 500px;
+}
+
+/* Permet de garder Facebook en contenu par défaut */
+#twitterTimeLine{
+  display: none;
+}
+
+/*####################*/
+/*####################*/
+/*##### PORTFOLIO ####*/
+/*####################*/
+/*####################*/
+
+#objPort {
+  height:300px;
+  background-color:red;
+}
+
+/*####################*/
+/*####################*/
+/*#### PARTENAIRES ###*/
+/*####################*/
+/*####################*/
+
+#objPart {
+  display:flex;
+  justify-content:center;
+}
+
+/*####################*/
+/*####################*/
+/*##### FOOTER #######*/
+/*####################*/
+/*####################*/
+
+footer {
+  background-color: black;
+	height: 30%;
+	width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.reseaux{
+	height:50%;
+	padding: 1.2% 20% 0 20%;
+	display: flex;
+  flex-flow:row nowrap;
+}
+
+.reseaux>a {
+	display: block;
+	height: 100%;
+	width: 60%;
+	margin: 0 2.5%;
+	text-align: center;
+}
+.reseaux img{
+	height: 55%;
+}
+.copyright p{
+	color: white;
+	text-align: center;
+	font-size: 1.2em;
+	margin: 0;
+}
